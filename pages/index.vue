@@ -1,9 +1,10 @@
 <template>
     <div>
+      <TheNav />
         <li v-for="post in posts" :key="post._id">
-          <NuxtLink :to="post._path">{{ post.title }}
+          <NuxtLink :to="post._path">{{ post.title }}</NuxtLink>
           <p>{{ post.summary }}</p>
-        </NuxtLink>
+        
         </li>
     </div>
 </template>

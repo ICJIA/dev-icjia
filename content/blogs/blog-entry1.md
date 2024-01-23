@@ -23,6 +23,5 @@ Collaborative programs should have an inclusive and equitable structure, roles a
 
 Applications on behalf of a collaborative are submitted by the responsible applicant organization but should include a signed Memoranda of Understanding (MOUs) from each partner organization expressing a commitment to work jointly to carry out the proposed program in the application.
 
-::callout.vue
-This is an example!
-::
+![title](img/icjia-logo.png)
+

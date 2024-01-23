@@ -1,5 +1,5 @@
 ---
-title: This is contains link to external website
+title: External Website
 summary: This blog contains a link to external website
 ---
 
