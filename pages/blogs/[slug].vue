@@ -1,6 +1,12 @@
 <template>
      <div v-if="data">
         <h1>{{ data.title }}</h1>
+        <ContentDoc
+                :key="data?.title"
+                :value="data"
+                class="markdown-body"
+              >
+        </ContentDoc>
      </div>
 </template>
 

@@ -28,7 +28,9 @@ import { useRouter} from 'vue-router';
 const router= useRouter();
 function routeTo(path){
   router.push(path);
-}
+};
+
+
 </script>
 
 <style lang="scss" scoped>
