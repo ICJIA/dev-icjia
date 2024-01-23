@@ -19,6 +19,7 @@
   "dependencies": {
     "@mdi/font": "^7.4.47",
     "@nuxt/content": "^2.11.0",
+    "@supabase/supabase-js": "^2.39.3",
     "axios": "^1.6.5",
     "dompurify": "^3.0.8",
     "fuse.js": "^7.0.0",

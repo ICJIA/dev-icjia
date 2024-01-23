@@ -5,4 +5,4 @@ summary: This blog contains a downloadable file.
 
 
 
-[Download sample file](pdf/state-holidays.pdf)
+[Download sample file](img/state-holidays.pdf)

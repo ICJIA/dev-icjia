@@ -22,3 +22,7 @@ A collaborative is a group that includes multiple partner organizations carrying
 Collaborative programs should have an inclusive and equitable structure, roles and responsibilities, and decision-making processes. Collaboratives must prioritize the needs of local partner organizations. Collaboratives should support the leadership of diverse, local organizations and stakeholders, and provide opportunities for local community-based organizations to build capacity as leaders in the program with the support of, rather than at the direction of, more established organizations.
 
 Applications on behalf of a collaborative are submitted by the responsible applicant organization but should include a signed Memoranda of Understanding (MOUs) from each partner organization expressing a commitment to work jointly to carry out the proposed program in the application.
+
+::callout.vue
+This is an example!
+::

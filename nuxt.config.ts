@@ -7,6 +7,7 @@ export default defineNuxtConfig({
   },
   modules: [
     "@nuxt/content",
+    
 
     async (options, nuxt) => {
       await nuxt.hooks.hook("vite:extendConfig", (config) => {
