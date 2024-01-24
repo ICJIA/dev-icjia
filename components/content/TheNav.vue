@@ -19,7 +19,7 @@
             <v-btn append-icon="$vuetify" to="/">Home</v-btn> 
         </v-col>
         <v-col>
-            <v-btn append-icon="$vuetify" @click="routeTo('/')">Display</v-btn> 
+            <v-btn append-icon="$vuetify" @click="routeTo('/blogs')">Display</v-btn> 
         </v-col>
     </v-row>
 </v-container>

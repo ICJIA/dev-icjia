@@ -8,7 +8,7 @@
    <v-app>
     <v-main>
       <v-container fluid>
-      <v-row dense v-if="posts">
+      <v-row dense >
         <v-col
           v-for="post in posts"
           :key="post._id"
