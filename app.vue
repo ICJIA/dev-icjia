@@ -2,10 +2,12 @@
 import { ContentTheNav } from '#build/components';
 <template>
   <div>
+
     <v-app>
     
-    <NuxtLoadingIndicator />
-    <ContentTheNav />
+
+      <TheNav />
+      
    <NuxtPage />
   </v-app>
   </div>

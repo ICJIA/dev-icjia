@@ -22,5 +22,6 @@ export default defineNuxtConfig({
       include: ["axios", "moment", "dompurify", "fuse.js", "lodash"],
     },
   },
+  
 
 })
