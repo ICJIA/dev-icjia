@@ -7,7 +7,7 @@ import { ContentTheNav } from '#build/components';
     
 
       <TheNav />
-      <TheSidebar></TheSidebar>
+      <TheSidebar />
    <NuxtPage />
   </v-app>
   </div>

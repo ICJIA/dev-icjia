@@ -1,9 +1,12 @@
 <template>
-  <div v-if="data">
-    <v-container class="mb-12 mt-6" fluid
+  <div v-if="pending">
+    <p>Loading..</p>
+    </div>
+    <div v-else>
+    <v-container fluid style="margin: 0; padding: 0"
         ><v-row
           ><v-col cols="12" :md="cols">
-            <div>
+            <div v-if="data">
      <h1>{{ data.title }}</h1>
      <ContentDoc
              :key="data?.title"
@@ -14,6 +17,7 @@
                 <template #not-found>Document not found</template>
      </ContentDoc>
      </div>
+     <div v-else>{{ redirect() }}</div>
      </v-col>
      </v-row>
      </v-container>

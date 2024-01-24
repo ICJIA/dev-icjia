@@ -13,7 +13,7 @@
             style="height: 100%"
             @click="router.push(`/blogs/${query[n - 1].slug}`)"
           >
-
+            {{ n.title }}
           </v-card>
           </v-col>
           </v-row>
