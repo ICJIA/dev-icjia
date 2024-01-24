@@ -23,7 +23,16 @@
 const {data:posts} =await useAsyncData('posts',() =>
 queryContent('/blogs').find()
 )
+const drawer = ref(false);
 
+
+useHead({
+  title: 'Blog Home Page',
+  meta: [
+    { name: 'description', content: 'Explore my latest blog posts!' },
+    
+  ],
+});
 </script>
 
 <style lang="scss" scoped>
