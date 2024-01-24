@@ -7,7 +7,7 @@ import { ContentTheNav } from '#build/components';
     
 
       <TheNav />
-      <TheSidebar />
+      <!--TheSidebar /-->
    <NuxtPage />
   </v-app>
   </div>
@@ -34,6 +34,7 @@ useHead({
       href: "/favicon.ico",
     },
   ],
+  title: 'ICJIA',
   meta: [
     // { name: "og:url", content: fullPath.value },
     {
@@ -55,5 +56,9 @@ useHead({
   htmlAttrs: {
     lang: "en",
   },
+
+
+ 
 });
+
 </script>

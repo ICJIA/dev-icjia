@@ -6,15 +6,30 @@
       <br />
       
    <v-app>
-      <ul v-if="posts">
-        <li v-for="post in posts" :key="post._id">
-          <br />
-          <NuxtLink :to="post._path">{{ post.title }}</NuxtLink>
-          <v-spacer></v-spacer>
-          <p style="white-space: pre">{{ post.summary }}</p>
-        
-        </li>
-      </ul>
+    <v-main>
+      <v-container fluid>
+      <v-row dense v-if="posts">
+        <v-col
+          v-for="post in posts"
+          :key="post._id"
+          cols="12"
+        >
+          <v-card >
+            <v-card-title>
+              <v-row no-gutters>
+                <v-col cols="auto">
+                  <NuxtLink :to="post._path">
+                    {{ post.title }}
+                  </NuxtLink>
+                </v-col>
+              </v-row>
+            </v-card-title>
+            <v-card-text class="pre-wrap">{{ post.summary }}</v-card-text>
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-container>
+    </v-main>
     </v-app>
     </div>
 </template>
@@ -27,7 +42,7 @@ const drawer = ref(false);
 
 
 useHead({
-  title: 'Blog Home Page',
+  title: 'ICJIA',
   meta: [
     { name: 'description', content: 'Explore my latest blog posts!' },
     
