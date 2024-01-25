@@ -16,10 +16,10 @@
                 md="6"
                 style="display: flex; flex-direction: column"
               >
-                <li :item="item"></li
-              ><NuxtLink :to="item._path">
+                <v-card-item :item="item">
+              <NuxtLink :to="item._path">
                     {{ item.title }}
-                  </NuxtLink>
+                  </NuxtLink></v-card-item>
 			  </v-col> </v-row
           ></v-container>
         </v-col>
@@ -38,6 +38,13 @@ const { data: query } = await useAsyncData("blogs", () =>
     
     .find()
 );
+useHead({
+  title: 'ICJIA',
+  meta: [
+    { name: 'description', content: 'Explore my latest blog posts!' },
+    
+  ],
+});
 </script>
 
 <style lang="scss" scoped>

@@ -34,6 +34,13 @@ return post;
 useHead({
 title: "Blogs",
 });
+useHead({
+  title: 'ICJIA',
+  meta: [
+    { name: 'description', content: 'Explore my latest blog posts!' },
+    
+  ],
+});
 </script>
 
 <style scoped>

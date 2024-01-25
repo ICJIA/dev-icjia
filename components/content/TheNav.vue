@@ -1,45 +1,61 @@
 <template>
-   
-   
-  <v-app-bar
-    color="teal-darken-4"
-    image="https://picsum.photos/1920/1080?random"
-  >
-    <template v-slot:image>
-      <v-img
-        gradient="to top right, rgba(19,84,122,.8), rgba(128,208,199,.8)"
-      ><v-app-bar-nav-icon></v-app-bar-nav-icon></v-img>
-    </template>
+  <div>
+    <v-app-bar
+      app
+      color="teal-darken-4"
+      image="https://picsum.photos/1920/1080?random"
+     >
+     <div
+        v-if="!nav"
+        class="hover hamburger text-center hidden-sm-and-down"
+        @click="toggleNav"
+      >
+      <v-icon icon="mdi-menu" size="large"></v-icon>
+        <div style="font-size: 10px; font-weight: 900">MENU</div>
+      </div>
+      <div
+        v-else
+        class="hover hamburger text-center hidden-md-and-up"
+        @click="toggleNav"
+      >
+        <v-icon icon="mdi-window-close" size="large"></v-icon>
+        <div style="font-size: 10px; font-weight: 900">CLOSE</div>
+      </div>
+      <v-spacer class="hidden-md-and-up"></v-spacer>
+      <img
+        alt="i2i Logo"
+        class="hover ml-4 mr-4"
+        src="/img/home.jpg"
+        width="55"
+        height="55"
+        @click="routeToHome()"
+      />
 
-
-    <v-app-bar-title align="center">Welcome To ICJIA</v-app-bar-title>
+  
+    <v-app-bar-title style="padding-left: 20px;" @click="$router.push('/')">Welcome To ICJIA</v-app-bar-title>
     <v-container>
     <v-row>
         <v-col>
             <v-btn append-icon="$vuetify" to="/">Home</v-btn> 
         </v-col>
-        <v-col>
-            <v-btn append-icon="$vuetify" @click="routeTo('/blogs')">Display</v-btn> 
-        </v-col>
+       
     </v-row>
-</v-container>
-    
-  
-
+  </v-container>
    
-  </v-app-bar>
-
-  
-
-
+    </v-app-bar>
+    
+  </div>
 </template>
 
 <script setup>
+import {useRouter} from 'vue-router';
 const routeToHome = () => {
-
-this.$router.push({name:'/'})
+  router.push({ path: "/" });
 };
-
+const nav = useNavToggle();
+const toggleNav = () => {
+  nav.value = !nav.value;
+};
 const router=useRouter();
 function routeTo(path){
 router.push(path);
@@ -47,5 +63,4 @@ router.push(path);
 </script>
 
 <style scoped>
-
 </style>
