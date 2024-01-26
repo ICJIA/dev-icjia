@@ -8,7 +8,7 @@
 	  >
 		<v-list v-model:opened="open" density="compact">
 		  <div
-			v-for="(menu, index) in navMenu"
+			v-for="(menu, index) in sideMenu"
 			:key="`sidebar-accordion-${index}`"
 		  >
 			<div v-if="menu && menu.children">
@@ -69,6 +69,8 @@
   </template>
   
   <script setup>
+  const appConfig = useAppConfig();
+
   const isMounted = ref(false);
 const drawer = ref(false);
 const open = ref([]);
@@ -84,7 +86,9 @@ const click = () => {
   altState.value = false;
 };
 
-  
+  const sideMenu = [
+  {title: 'Home',route: '/'},
+]
   </script>
   
   <style lang="scss" scoped>

@@ -5,6 +5,10 @@
       app
       color="white"
       class="pl-5 pr-5"
+      density="default"
+      style="z-index: 50; width: 100%"
+      size="90"
+      elevation="3"
     >
     <div
         v-if="!nav"
@@ -38,8 +42,8 @@
             letter-spacing: 0.004em;
           "
           class="agency app-title"
-          @click="$router.push('/')"
-          ><span></span>&nbsp;&nbsp;ICJIA
+          @click="routeToHome()"
+          ><span></span>&nbsp;&nbsp;Illinois Criminal Justice
         </span>
       </div>
       <div class="hover hidden-md-and-up hidden-xs">
@@ -52,18 +56,27 @@
           class="agency app-title"
           @click="$router.push('/')"
           ><span></span>&nbsp;&nbsp;ICJIA
+          
         </span>
       </div>
-     
-      <span v-if="menu && menu?.children">
+      
+      <v-spacer></v-spacer>
+      <span v-if="isMounted">
+        <span
+          v-for="(menu, index) in navMenu"
+          :key="`main-${index}`"
+          style="display: inline-block"
+        >
+          <span v-if="menu && menu?.children">
             <v-menu>
+              console.log("Veni Checkpoint");
               <template #activator="{ props }">
                 <v-btn
                   variant="text"
                   size="default"
                   class="hidden-sm-and-down navItem"
                   v-bind="props"
-                >
+                > console.log("Veni Checkpoint");
                   {{ menu.main }}
                   <v-icon right small>mdi-menu-down</v-icon></v-btn
                 >
@@ -97,11 +110,27 @@
                     >
                   </v-list-item>
                 </span>
-                
               </v-list>
             </v-menu>
-          </span> 
-      
+          </span>
+          <span v-else class="d-flex">
+            <v-btn
+              :to="menu?.external ? null : menu?.link"
+              :href="menu?.external ? menu.link : null"
+              :target="menu?.external ? '_blank' : null"
+              :aria-label="menu.main"
+              variant="text"
+              size="default"
+              class="hidden-sm-and-down navItem"
+              style="font-weight: 900 !important; font-size: 16px"
+              >{{ menu.main }}&nbsp;
+              <v-icon v-if="menu.icon" right small color="black">{{
+                menu.icon
+              }}</v-icon>
+            </v-btn>
+          </span>
+        </span>
+      </span>
       <v-row justify="end">
       <v-btn append-icon="$vuetify" to="/">Home</v-btn> 
     </v-row>
@@ -110,22 +139,37 @@
 </template>
 
 <script setup>
-
-
-
 const isMounted = ref(false);
-const routeToHome = () => {
-  router.push({ path: "/" });
-};
 const nav = useNavToggle();
 const toggleNav = () => {
   nav.value = !nav.value;
 };
-const router=useRouter();
-function routeTo(path){
-router.push(path);
-}
+const appConfig = useAppConfig();
+
+
+const routeToHome = () => {
+  console.log("Click logo");
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  });
+
+  router.push({ path: "/" });
+};
+
+onMounted(() => {
+  isMounted.value = true;
+});
+
+const router = useRouter();
+
+const navMenu = [
+  {title: 'Home',route: '/'},
+]
+
+
 </script>
 
-<style scoped>
+<style>
 </style>
