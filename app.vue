@@ -9,6 +9,7 @@ import { ContentTheNav } from '#build/components';
       <TheNav />
       <TheSide />
    <NuxtPage />
+  <TheFooter />
   </v-app>
   </div>
 </template>
@@ -26,6 +27,17 @@ watchEffect(() => {
     isHome.value = false;
   }
 });
+let isMounted = ref(false);
+const scrollToTop = () => {
+  if (!isMounted.value) {
+    return;
+  }
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  });
+};
 useHead({
   link: [
     {

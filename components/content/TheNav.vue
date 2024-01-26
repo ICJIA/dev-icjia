@@ -6,7 +6,7 @@
       color="white"
       class="pl-5 pr-5"
       density="default"
-      style="z-index: 50; width: 100%"
+      style="background: #0e4474"
       size="90"
       elevation="3"
     >

@@ -31,15 +31,18 @@ const post = await queryContent().where({ _path: path }).findOne();
 return post;
 });
 
+
 useHead({
-title: "Blogs",
-});
-useHead({
-  title: 'ICJIA',
+  title: data.value?.title,
   meta: [
     { name: 'description', content: 'Explore my latest blog posts!' },
     
   ],
+  link:[
+    {
+      hid:'blog',href:'Path'
+    }
+  ]
 });
 </script>
 

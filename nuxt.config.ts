@@ -12,7 +12,7 @@ export default defineNuxtConfig({
 
     async (options, nuxt) => {
       await nuxt.hooks.hook("vite:extendConfig", (config) => {
-        // console.log(config);
+     
         config?.plugins?.push(vuetify());
       });
     },
@@ -23,5 +23,24 @@ export default defineNuxtConfig({
       include: ["axios", "moment", "dompurify", "fuse.js", "lodash"],
     },
   },
+  content: {
+ 
+    highlight: {
+        theme: 'github-dark',
+        preload: ['java','javascript']
+    },
+    markdown: {
+
+        rehypePlugins: [
+            [
+                'rehype-external-links',
+                {
+                    target: '_blank',
+                    rel: 'noopener noreferer'
+                }
+            ]
+        ]
+    }
+}
 
 })
