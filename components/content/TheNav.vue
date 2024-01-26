@@ -26,6 +26,7 @@
         <v-icon icon="mdi-window-close" size="large"></v-icon>
         <div style="font-size: 10px; font-weight: 900">CLOSE</div>
       </div>
+      <v-spacer class="hidden-md-and-up"></v-spacer>
       <img
         alt="i2i Logo"
         class="hover ml-4 mr-4"
@@ -69,14 +70,14 @@
         >
           <span v-if="menu && menu?.children">
             <v-menu>
-              console.log("Veni Checkpoint");
+          
               <template #activator="{ props }">
                 <v-btn
                   variant="text"
                   size="default"
                   class="hidden-sm-and-down navItem"
                   v-bind="props"
-                > console.log("Veni Checkpoint");
+                > 
                   {{ menu.main }}
                   <v-icon right small>mdi-menu-down</v-icon></v-btn
                 >
@@ -164,10 +165,17 @@ onMounted(() => {
 
 const router = useRouter();
 
-const navMenu = [
+const navMenu = ([
   {title: 'Home',route: '/'},
-]
-
+  {
+          divider: true,
+        },
+]);
+const openTranslationModal = () => {
+  const toggleState = useTranslateToggle();
+  toggleState.value = true;
+};
+const { isTranslationEnabled } = true;
 
 </script>
 

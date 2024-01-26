@@ -59,10 +59,7 @@
 		 
 		  <v-divider class="my-3"></v-divider>
   
-		  <v-list-item exact to="/">
-			<v-icon left icon="mdi-email" size="x-small"></v-icon
-			>&nbsp;&nbsp;&nbsp;HOME</v-list-item
-		  >
+		 
 		</v-list>
 	  </v-navigation-drawer>
 	</div>
@@ -86,9 +83,26 @@ const click = () => {
   altState.value = false;
 };
 
-  const sideMenu = [
+
+  const sideMenu = ([
   {title: 'Home',route: '/'},
-]
+]);
+
+onMounted(() => {
+  isMounted.value = true;
+});
+
+const router = useRouter();
+const routeTo = (url) => {
+  altState.value = false;
+
+  router.push({ path: url });
+};
+
+const translationToggle = () => {
+  const translationState = useTranslateToggle();
+  translationState.value = !translationState.value;
+};
   </script>
   
   <style lang="scss" scoped>
