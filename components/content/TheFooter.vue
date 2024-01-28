@@ -26,6 +26,35 @@
                   @click="routeToExternal('https://icjia.illinois.gov')"
                 />
             </div>
+            <v-btn
+                  variant="text"
+                  style="
+                    color: #fff !important;
+                    font-size: 20px;
+                    margin-right: -10px;
+                  "
+                  target="_blank"
+                  aria-label="Link to ICJIA on Facebook"
+                  href="https://www.facebook.com/ICJIA/"
+                  ><v-icon>mdi-facebook</v-icon></v-btn
+                >
+                <v-btn
+                  variant="text"
+                  style="color: #fff !important; font-size: 20px"
+                  target="_blank"
+                  aria-label="Link to ICJIA on YouTube"
+                  href="https://www.youtube.com/c/illinoiscriminaljusticeinformationauthority"
+                  ><v-icon> mdi-youtube</v-icon></v-btn
+                >
+
+                <v-btn
+                  variant="text"
+                  style="color: #fff !important; font-size: 20px"
+                  target="_blank"
+                  href="https://www.instagram.com/icjia_illinois/"
+                  aria-label="ICJIA on Instagram"
+                  ><v-icon>mdi-instagram</v-icon></v-btn
+                >
             </v-col>
             </v-row>
         </v-container>
