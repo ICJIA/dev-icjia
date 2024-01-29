@@ -3,7 +3,7 @@ import { ContentTheNav } from '#build/components';
 <template>
   <div>
 
-    <v-app>
+    <v-app id="app-top">
     
 
       <TheNav />
@@ -48,7 +48,7 @@ useHead({
   ],
   title: 'ICJIA',
   meta: [
-    // { name: "og:url", content: fullPath.value },
+  
     {
       hid: "og-image",
       property: "og:image",

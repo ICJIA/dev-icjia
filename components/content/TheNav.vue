@@ -44,7 +44,7 @@
           "
           class="agency app-title"
           @click="routeToHome()"
-          ><span></span>&nbsp;&nbsp;Illinois Criminal Justice
+          ><span></span>&nbsp;&nbsp;Illinois Criminal Justice And Information Autority
         </span>
       </div>
       <div class="hover hidden-md-and-up hidden-xs">
@@ -114,22 +114,7 @@
               </v-list>
             </v-menu>
           </span>
-          <span v-else class="d-flex">
-            <v-btn
-              :to="menu?.external ? null : menu?.link"
-              :href="menu?.external ? menu.link : null"
-              :target="menu?.external ? '_blank' : null"
-              :aria-label="menu.main"
-              variant="text"
-              size="default"
-              class="hidden-sm-and-down navItem"
-              style="font-weight: 900 !important; font-size: 16px"
-              >{{ menu.main }}&nbsp;
-              <v-icon v-if="menu.icon" right small color="black">{{
-                menu.icon
-              }}</v-icon>
-            </v-btn>
-          </span>
+          
         </span>
       </span>
       <v-row justify="end">

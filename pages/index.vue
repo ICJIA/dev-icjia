@@ -27,7 +27,7 @@
             </v-card-title>
             <p class="ma-0 text-body-1 font-weight-bold">
             <v-card-text class="pre-wrap">{{ post.summary }}</v-card-text>
-          </p>
+            </p>
           </v-card>
         </v-hover>
         </v-col>

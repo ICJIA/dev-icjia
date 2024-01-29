@@ -29,18 +29,6 @@ export default defineNuxtConfig({
         theme: 'github-dark',
         preload: ['java','javascript']
     },
-    markdown: {
-
-        rehypePlugins: [
-            [
-                'rehype-external-links',
-                {
-                    target: '_blank',
-                    rel: 'noopener noreferer'
-                }
-            ]
-        ]
-    }
 }
 
 })

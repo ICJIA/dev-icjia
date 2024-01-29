@@ -1,10 +1,11 @@
 <template>
 	<div>
 		<div>
-    <v-container fluid style="margin-top: -18px">
-      <v-row>
-        <v-col>
-          <h1 class="brand-color">All List of Blogs</h1>
+    <v-container fluid>
+        <v-row>
+          <v-col cols="12" class="text-center"
+            ><h2 class="h2-home">icjia-logo</h2>
+          
 
           <v-container fluid>
             <v-row align="stretch">
