@@ -1,6 +1,6 @@
 ---
 title: External Website
-summary: This blog contains a link to external website
+summary: This blog contains a link to external website.
 ---
 
 <br />

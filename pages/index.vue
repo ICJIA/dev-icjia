@@ -7,25 +7,29 @@
       
    <v-app>
     <v-main>
-      <v-container fluid>
-      <v-row dense >
+      <v-container class="pa-4 text-center">
+      <v-row class="fill-height" align="center" justify="center" >
         <v-col
           v-for="post in posts"
           :key="post._id"
-          cols="12"
+          cols="12" md="4"
         >
-          <v-card >
-            <v-card-title>
-              <v-row no-gutters>
-                <v-col cols="auto">
+        <v-hover v-slot="{ isHovering, props }">
+          <v-card :elevation="isHovering ? 12 : 2"
+              :class="{ 'on-hover': isHovering }"
+              v-bind="props">
+            <v-card-title class="text-h6 text-white d-flex flex-column">
+                <p class="mt-4">
                   <NuxtLink :to="post._path">
                     {{ post.title }}
                   </NuxtLink>
-                </v-col>
-              </v-row>
+                </p>
             </v-card-title>
+            <p class="ma-0 text-body-1 font-weight-bold">
             <v-card-text class="pre-wrap">{{ post.summary }}</v-card-text>
+          </p>
           </v-card>
+        </v-hover>
         </v-col>
       </v-row>
     </v-container>
