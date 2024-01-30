@@ -66,7 +66,6 @@
   </template>
   
   <script setup>
-  const appConfig = useAppConfig();
 
   const isMounted = ref(false);
 const drawer = ref(false);

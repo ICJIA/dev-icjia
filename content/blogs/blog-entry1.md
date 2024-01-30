@@ -1,5 +1,5 @@
 ---
-title: "ICJIA"
+title: "ICJIA LOGO"
 slug: index
 showInSitemap: true
 tocHeading: "Collaboratives"

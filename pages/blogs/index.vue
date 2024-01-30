@@ -1,5 +1,5 @@
 <template>
-	<div>
+	
 		<div>
     <v-container fluid>
         <v-row>
@@ -11,7 +11,7 @@
             <v-row align="stretch">
               <v-col
                 v-for="item in query"
-                :key="item._path"
+                :key="item._id"
                 class="mb-8"
                 cols="12"
                 md="6"
@@ -27,7 +27,7 @@
       </v-row>
     </v-container>
   </div>
-	</div>
+	
 </template>
 
 <script setup>
@@ -35,7 +35,7 @@ const { path } = useRoute();
 const router = useRouter();
 
 const { data: query } = await useAsyncData("blogs", () =>
-  queryContent("/blogs/")
+  queryContent("/")
     
     .find()
 );
@@ -45,6 +45,9 @@ useHead({
     { name: 'description', content: 'Explore my latest blog posts!' },
     
   ],
+});
+definePageMeta({
+  path: '/index',
 });
 </script>
 

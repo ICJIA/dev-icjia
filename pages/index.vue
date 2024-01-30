@@ -1,45 +1,53 @@
 <template>
-    <div>
+
+    <div style="min-height: 400px; background-color: #9abbe9"
+      class="pt-0 pb-12">
       <br />
       <br />
       <br />
       <br />
       
-   <v-app>
-    <v-main>
-      <v-container class="pa-4 text-center">
-      <v-row class="fill-height" align="center" justify="center" >
+      <v-container fluid>
+        <v-row>
+          <v-col cols="12" class="text-center"
+            ><h2 class="h2-home">List of All blogs</h2></v-col
+          ></v-row
+        ></v-container
+      >
+   
+      <v-container fluid>
+      <v-row >
         <v-col
           v-for="post in posts"
-          :key="post._id"
-          cols="12" md="4"
-        >
-        <v-hover v-slot="{ isHovering, props }">
-          <v-card :elevation="isHovering ? 12 : 2"
-              :class="{ 'on-hover': isHovering }"
-              v-bind="props">
-            <v-card-title class="text-h6 text-white d-flex flex-column">
+          :key="post._path"
+          cols="12" md="3"
+          class="d-flex"
+        >       
+       <v-card class="mx-auto rounded-xl elevation-10 d-flex flex-column pb-3 px-3 pt-4 info-card"
+              style="width: 100%">
+              
+            <v-card-title class="heavy-900">
                 <p class="mt-4">
                   <NuxtLink :to="post._path">
                     {{ post.title }}
                   </NuxtLink>
                 </p>
             </v-card-title>
-            <p class="ma-0 text-body-1 font-weight-bold">
+           
             <v-card-text class="pre-wrap">{{ post.summary }}</v-card-text>
-            </p>
+            
           </v-card>
-        </v-hover>
+       
         </v-col>
       </v-row>
     </v-container>
-    </v-main>
-    </v-app>
+
+    
     </div>
 </template>
 
 <script setup>
-const {data:posts} =await useAsyncData('posts',() =>
+const {data:posts} =await useAsyncData('/',() =>
 queryContent('/blogs').find()
 )
 const drawer = ref(false);
@@ -55,5 +63,12 @@ useHead({
 </script>
 
 <style lang="scss" scoped>
-
+.h2-home {
+  border: none;
+  font-weight: 900;
+  font-size: 42px;
+}
+.heavy-900 {
+  font-weight: 900;
+}
 </style>

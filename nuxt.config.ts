@@ -12,7 +12,7 @@ export default defineNuxtConfig({
 
     async (options, nuxt) => {
       await nuxt.hooks.hook("vite:extendConfig", (config) => {
-     
+        // console.log(config);
         config?.plugins?.push(vuetify());
       });
     },
@@ -29,6 +29,29 @@ export default defineNuxtConfig({
         theme: 'github-dark',
         preload: ['java','javascript']
     },
-}
+    markdown: {
+        // Configuring external link processing
+        // https://github.com/rehypejs/rehype-external-links
+        rehypePlugins: [
+            [
+                'rehype-external-links',
+                {
+                    target: '_blank',
+                    rel: 'noopener noreferer'
+                }
+            ]
+        ]
+    }
+},
 
+nitro: {
+ 
+  prerender: {
+    crawlLinks: true,
+    failOnError: false, 
+  },
+},
+routeRules:{
+  "/":{swr:true},
+}
 })
