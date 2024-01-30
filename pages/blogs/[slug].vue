@@ -1,8 +1,6 @@
 <template>
-  <div v-if="pending">
-    <p>Loading..</p>
-    </div>
-    <div v-else>
+  
+    <div>
     <v-container fluid style="margin: 0; padding: 0"
         ><v-row
           ><v-col cols="12" :md="cols">

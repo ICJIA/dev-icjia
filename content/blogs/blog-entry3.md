@@ -9,7 +9,7 @@ summary: This blog contains a downloadable file.
 
 [State Holidays][filename1]
 
-[filename1]: /img/state_holidays.pdf
+
 
 <div>
 <embed src = "/img/state_holidays.pdf" width="1440px" height = "900px" />
