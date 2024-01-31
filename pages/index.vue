@@ -23,8 +23,11 @@
           cols="12" md="3"
           class="d-flex"
         >       
-       <v-card class="mx-auto rounded-xl elevation-10 d-flex flex-column pb-3 px-3 pt-4 info-card"
-              style="width: 100%">
+       <v-card class="rounded-xl elevation-10 d-flex flex-column" 
+              style="width: 100%"
+              
+              hover
+              >
               
             <v-card-title class="heavy-900">
                 <p class="mt-4">
@@ -33,20 +36,19 @@
                   </NuxtLink>
                 </p>
             </v-card-title>
-           
-            <v-card-text class="pre-wrap">{{ post.summary }}</v-card-text>
             
+            <v-card-text class="pre-wrap">{{ post.summary }}</v-card-text>
+            <v-card-actions>
+          <v-btn>Click me</v-btn>
+          
+        </v-card-actions>
           </v-card>
        
         </v-col>
       </v-row>
     </v-container>
     <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+     
      
     
     </div>

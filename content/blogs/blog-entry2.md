@@ -8,7 +8,10 @@ summary: This blog contains a link to external website.
 <br />
 <br />
 
-[Click this website](https://www.google.com)
+
+[Travel blog](https://theworldtravelguy.com/)
+
+![Sunset in Greece](https://www.elegantthemes.com/blog/wp-content/uploads/2017/06/PS-Im-On-My-Way.jpg)
 
 
 

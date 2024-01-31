@@ -3,7 +3,7 @@
     <v-app-bar
       fixed
       app
-      color="white"
+      
       class="pl-5 pr-5"
       density="default"
       style="background: #0e4474"
