@@ -39,7 +39,7 @@
             
             <v-card-text class="pre-wrap">{{ post.summary }}</v-card-text>
             <v-card-actions>
-          <v-btn>Click me</v-btn>
+          <v-btn :to="post._path">Click me</v-btn>
           
         </v-card-actions>
           </v-card>

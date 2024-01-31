@@ -7,7 +7,8 @@
       class="pl-5 pr-5"
       density="default"
       style="background: #0e4474"
-      size="90"
+      width="100%"        
+      size="100"
       elevation="3"
     >
     <div
@@ -41,10 +42,11 @@
           font-weight: 900 !important;
             font-size: 22px;
             letter-spacing: 0.004em;
+            color: white
           "
           class="agency app-title"
           @click="routeToHome()"
-          ><span></span>&nbsp;&nbsp;Illinois Criminal Justice And Information Autority
+          >&nbsp;&nbsp;Illinois Criminal Justice And Information Autority
         </span>
       </div>
       <div class="hover hidden-md-and-up hidden-xs">
@@ -118,7 +120,7 @@
         </span>
       </span>
       <v-row justify="end">
-      <v-btn append-icon="$vuetify" to="/">Home</v-btn> 
+      <v-btn color="white" to="/">Home</v-btn> 
     </v-row>
     </v-app-bar>   
     </div>
