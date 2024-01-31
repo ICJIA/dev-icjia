@@ -9,7 +9,8 @@
       <TheNav />
       <TheSide />
    <NuxtPage />
-  <TheFooter />
+  <TheFooter v-if="isMounted"></TheFooter>
+  
   </v-app>
   </div>
 </template>
@@ -17,5 +18,7 @@
  const isHome = ref(true);
 const route = useRoute();
 const routePath = ref(route.path);
+
+const isMounted = ref(true);
 
 </script>

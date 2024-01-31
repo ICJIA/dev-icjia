@@ -7,8 +7,6 @@ summary: This blog contains a downloadable file.
 
 
 
-[State Holidays][filename1]
-
 
 
 <div>

@@ -1,11 +1,11 @@
 <template>
     <div>
-        <v-footer id="footer" class="site-footer" role="contentinfo">
+        <v-footer dark class="" style="margin: 0; padding: 0">
             <v-card
         flat
         tile
         width="100%"
-        class="text-center pb-4 rounded-0"
+        class="text-center markdown-body pb-4 rounded-0"
         style="background: #0e4474"
       >
       <v-container class="mt-0" fill-height>
@@ -16,7 +16,7 @@
               class="text-center mt-2"
               style="color: white"
             >
-              <div>
+            <div>
                 <img
                   src="/img/icjia-logo.png"
                   alt="Footer logo"
@@ -25,8 +25,9 @@
                   class="hover"
                   @click="routeToExternal('https://icjia.illinois.gov')"
                 />
-            </div>
-            <v-btn
+              </div>
+              <div class="pb-6">
+                <v-btn
                   variant="text"
                   style="
                     color: #fff !important;
@@ -55,11 +56,26 @@
                   aria-label="ICJIA on Instagram"
                   ><v-icon>mdi-instagram</v-icon></v-btn
                 >
+
+                <v-btn
+                  variant="text"
+                  style="color: #fff !important; font-size: 20px"
+                  target="_blank"
+                  href="https://www.linkedin.com/company/icjia/"
+                  aria-label="ICJIA on LinkedIn "
+                  ><v-icon>mdi-linkedin</v-icon></v-btn
+                >
+                </div>
+                <div style="font-size: 12px; font-weight: 400">
+                <strong
+                  >&#169; {{ new Date().getFullYear() }}
+                  </strong>
+                  </div>
             </v-col>
             </v-row>
-        </v-container>
+            </v-container>
       </v-card>
-        </v-footer>
+            </v-footer>
     </div>
 </template>
 
@@ -67,6 +83,7 @@
 const routeToExternal = (URL) => {
       window.open(URL, "_blank");
     };
+   
 </script>
 
 <style lang="scss" scoped>
