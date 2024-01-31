@@ -20,9 +20,8 @@ date: 2023-01-16
 <br />
 <br />
 <br />
-The ICJIA Image Markdown file 
+The ICJIA 
 
-## Features
 
 - Created in 1983, the Illinois Criminal Justice Information Authority (ICJIA) is a state agency dedicated to improving the administration of criminal justice. ICJIA works to ensure the criminal justice system in Illinois is efficient, effective, and equitable.
 
@@ -32,9 +31,7 @@ The ICJIA Image Markdown file
 ![Image](/img/icjia-logo.png)
 </div>
 
-## License
 
-ICJIA
 
 **Illinois Criminal Justice and Information Authority!**
 

@@ -133,7 +133,7 @@ const toggleNav = () => {
   nav.value = !nav.value;
 };
 const appConfig = useAppConfig();
-
+const navMenu = JSON.parse(JSON.stringify(appConfig.navMenu));
 
 const routeToHome = () => {
   console.log("Click logo");
@@ -152,12 +152,7 @@ onMounted(() => {
 
 const router = useRouter();
 
-const navMenu = ([
-  {title: 'Home',route: '/'},
-  {
-          divider: true,
-        },
-]);
+
 const openTranslationModal = () => {
   const toggleState = useTranslateToggle();
   toggleState.value = true;
