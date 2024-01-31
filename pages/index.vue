@@ -25,12 +25,12 @@
         >       
        <v-card class="rounded-xl elevation-10 d-flex flex-column" 
               style="width: 100%"
-              
+              color="#dde7f0"
               hover
               >
               
             <v-card-title class="heavy-900">
-                <p class="mt-4">
+                <p class="mt-4"  color="white">
                   <NuxtLink :to="post._path">
                     {{ post.title }}
                   </NuxtLink>

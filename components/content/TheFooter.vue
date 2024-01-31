@@ -1,14 +1,15 @@
 <template>
     <div>
-        <v-footer dark class="" style="margin: 0; padding: 0">
+        <v-footer dark class="d-flex flex-column" style="margin: 0; padding: 0">
             <v-card
         flat
         tile
         width="100%"
+        height="100%"
         class="text-center markdown-body pb-4 rounded-0"
         style="background: #0e4474"
       >
-      <v-container class="mt-0" fill-height>
+      
           <v-row align="center" justify="center">
             <v-col
               cols="12"
@@ -73,7 +74,7 @@
                   </div>
             </v-col>
             </v-row>
-            </v-container>
+         
       </v-card>
             </v-footer>
     </div>
