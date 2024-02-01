@@ -8,7 +8,7 @@ export default defineAppConfig({
           link: "/",
         },
     ],
-    sideMenu:[
+    sidebarMenu:[
         {
             main: "home",
             link: "/",

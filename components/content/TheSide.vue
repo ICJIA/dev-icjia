@@ -68,7 +68,7 @@
   <script setup>
   const { isTranslationEnabled } = useAppConfig();
 const appConfig = useAppConfig();
-const navMenu = JSON.parse(JSON.stringify(appConfig.sidebarMenu));
+const sideMenu = JSON.parse(JSON.stringify(appConfig.sidebarMenu));
   const isMounted = ref(false);
 const drawer = ref(false);
 const open = ref([]);
