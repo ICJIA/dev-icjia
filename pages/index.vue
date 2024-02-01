@@ -23,7 +23,7 @@
           cols="12" md="3"
           class="d-flex"
         >       
-       <v-card class="rounded-xl elevation-10 d-flex flex-column" 
+       <v-card class="rounded-xl elevation-10 d-flex flex-column info-card" 
               style="width: 100%"
               color="#dde7f0"
               hover

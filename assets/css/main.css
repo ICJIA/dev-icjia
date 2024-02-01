@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 .hover {
     cursor: pointer
 }
@@ -18,7 +22,5 @@
     cursor: pointer;
 }
 
-.pending {
-    color: red;
-}
+
    

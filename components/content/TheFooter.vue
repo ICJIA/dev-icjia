@@ -1,12 +1,12 @@
 <template>
     <div>
-        <v-footer dark class="" style="margin: 0; padding: 0">
+        <v-footer dark class="" style="margin: 0; padding: 0" fixed app>
             <v-card
-        flat
-        tile
+      
+       
         width="100%"
-        height="100%"
-        class="text-center markdown-body pb-4 rounded-0"
+       
+        class="text-center markdown-body pb-0 rounded-0"
         style="background: #0e4474"
       >
       
@@ -14,7 +14,7 @@
             <v-col
               cols="12"
               md="12"
-              class="text-center mt-2"
+              class="text-center mt-2 hover"
               style="color: white"
             >
             <div>

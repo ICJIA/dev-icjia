@@ -16,16 +16,16 @@
        class="hover hamburger text-center hidden-md-and-up"
        @click="toggleNav"
      >
-       <v-icon icon="mdi-menu" size="large"></v-icon>
-       <div style="font-size: 10px; font-weight: 900">MENU</div>
+       <v-icon icon="mdi-menu" size="large" style="color:white;"></v-icon>
+       <div style="font-size: 10px; font-weight: 900; color: white">MENU</div>
      </div>
      <div
        v-else
        class="hover hamburger text-center hidden-md-and-up"
        @click="toggleNav"
      >
-       <v-icon icon="mdi-window-close" size="large"></v-icon>
-       <div style="font-size: 10px; font-weight: 900">CLOSE</div>
+       <v-icon icon="mdi-window-close" size="large" style="color:white;"></v-icon>
+       <div style="font-size: 10px; font-weight: 900; color: white">CLOSE</div>
      </div>
      <v-spacer class="hidden-md-and-up"></v-spacer>
      <img
@@ -125,7 +125,7 @@
               :aria-label="menu.main"
               variant="text"
               size="default"
-              class="hidden-sm-and-down navItem"
+              class=" hover hidden-sm-and-down navItem"
               style="font-weight: 900 !important; font-size: 16px"
               color="white"
               >{{ menu.main }}&nbsp;
@@ -181,4 +181,5 @@ const { isTranslationEnabled } = true;
 .hover {
     cursor: pointer
 }
+
 </style>
