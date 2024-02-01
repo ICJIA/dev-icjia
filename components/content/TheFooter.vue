@@ -1,6 +1,6 @@
 <template>
     <div>
-        <v-footer dark class="d-flex flex-column" style="margin: 0; padding: 0">
+        <v-footer dark class="" style="margin: 0; padding: 0">
             <v-card
         flat
         tile
