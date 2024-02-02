@@ -59,7 +59,9 @@ const {data:posts} =await useAsyncData('/',() =>
 queryContent('/blogs').find()
 )
 const drawer = ref(false);
-
+definePageMeta({
+  layout:'default'
+})
 
 useHead({
 title: 'ICJIA',

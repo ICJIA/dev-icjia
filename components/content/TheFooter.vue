@@ -67,11 +67,7 @@
                   ><v-icon>mdi-linkedin</v-icon></v-btn
                 >
                 </div>
-                <div style="font-size: 12px; font-weight: 400">
-                <strong
-                  >&#169; {{ new Date().getFullYear() }}
-                  </strong>
-                  </div>
+                
             </v-col>
             </v-row>
          

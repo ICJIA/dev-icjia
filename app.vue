@@ -7,9 +7,11 @@
     
 
       <TheNav />
+      
       <TheSide />
-     <NuxtLayout />
+      <NuxtLayout />
    <NuxtPage />
+   
   <TheFooter v-if="isMounted"></TheFooter>
   
   </v-app>

@@ -30,6 +30,9 @@ return post;
 const redirect = () => {
 router.push("/404");
 };
+definePageMeta({
+  layout: 'content'
+})
 
 useHead({
 title: data.value?.title,
