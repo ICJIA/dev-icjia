@@ -8,6 +8,7 @@
 
       <TheNav />
       <TheSide />
+     <NuxtLayout />
    <NuxtPage />
   <TheFooter v-if="isMounted"></TheFooter>
   
