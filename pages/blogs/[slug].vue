@@ -28,7 +28,7 @@ const post = await queryContent().where({ _path: path }).findOne();
 return post;
 });
 if(!data.value){
-  throw showError({statusCode:404,statusMessage:"Page Not Found"});
+  throw showError({statusCode:404,statusMessage:"Page Not Found",fatal:true});
 }
 const redirect = () => {
 router.push("/404");
