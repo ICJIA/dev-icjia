@@ -22,11 +22,14 @@
 </template>
 
 <script setup>
-const { path } = useRoute()
+const { path } = useRoute();
 const { data } = await useAsyncData(`content-${path}`, async () => {
 const post = await queryContent().where({ _path: path }).findOne();
 return post;
 });
+if(!data.value){
+  throw showError({statusCode:404,statusMessage:"Page Not Found"});
+}
 const redirect = () => {
 router.push("/404");
 };
