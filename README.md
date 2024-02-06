@@ -1,3 +1,18 @@
+**ICJIA DEV PROJECT**
+
+**For Installation**
+
+git clone https://github.com/ICJIA/icjia-r3-nuxt3.git
+cd icjia-r3-nuxt3
+yarn install
+
+**Development Server**
+
+Start the development server on http://localhost:8000
+
+yarn dev
+
+
 # Website link
 
 https://dev-icjia-new.netlify.app
