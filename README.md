@@ -3,7 +3,9 @@
 **For Installation**
 
 https://github.com/ICJIA/dev-icjia-new
+
 cd dev-icjia-new
+
 yarn install
 
 **Development Server**
