@@ -2,8 +2,8 @@
 
 **For Installation**
 
-git clone https://github.com/ICJIA/icjia-r3-nuxt3.git
-cd icjia-r3-nuxt3
+https://github.com/ICJIA/dev-icjia-new
+cd dev-icjia-new
 yarn install
 
 **Development Server**
