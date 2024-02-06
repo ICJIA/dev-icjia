@@ -1,5 +1,5 @@
 ---
-title: "This is the image file of ICJIA"
+title: "ICJIA LOGO"
 slug: index
 showInSitemap: true
 tocHeading: "Collaboratives"
@@ -9,7 +9,7 @@ showInNav: false
 showInSidebar: true
 menuTitle: "Collaboratives"
 menuRank: 45
-summary: "This blog contains icjia log."
+summary: "This blog contains icjia logo."
 showAsCard: true
 cardIcon: "people"
 lang: "en"
