@@ -5,7 +5,7 @@
       ><v-row
         ><v-col cols="12" :md="cols">
           <div v-if="data">
-   <h1>{{ data.title }}</h1>
+   <h1 style="text-align:center;">{{ data.title }}</h1>
    <ContentDoc
            :key="data?.title"
            :value="data"

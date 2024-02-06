@@ -1,5 +1,5 @@
 ---
-title: "ICJIA LOGO"
+title: "This is the image file of ICJIA"
 slug: index
 showInSitemap: true
 tocHeading: "Collaboratives"
@@ -21,7 +21,7 @@ date: 2023-01-16
 
 <div style="font-family:'Verdana, sans-serif'" align="center">
  
-# This is the example file for images
+# 
 
 </div>
 <br />

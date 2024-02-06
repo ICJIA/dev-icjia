@@ -6,7 +6,7 @@
         font-size: 13px;
         z-index: 99999 !important;
       "
-      class="text-left pr-5 pl-5 py-1 elevation-0"
+      class="text-left pr-5 pl-5 py-1"
     >
       <nuxt-link to="/" class="breadcrumb-link" style="color: white"
         >ICJIA HOME</nuxt-link
