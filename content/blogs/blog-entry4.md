@@ -4,8 +4,7 @@ summary: This blog contains an embedded Youtube video.
 ---
 <br />
 <br />
-<br />
-<br />
+
 
 <div class="text-center mt-8 mb-8">
 

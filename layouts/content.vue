@@ -2,12 +2,12 @@
     <div>
         <br />
         <br />
-        <br />
-        <br />
+    <br />
+    
         <div class="px-6">
             <v-form class="pl-2 mt-4" style="margin-top: -15px">
               <v-text-field
-                id="textfield"
+              id="textfield"
                 ref="textfield"
                 v-model="query"
                 autocomplete="off"
@@ -15,16 +15,23 @@
                 label="Search i2i"
                 placeholder="Enter search term"
                 style="font-weight: 900"
-                @input="instantSearch"
+                @input="handleSearch"
                 @keypress.enter.prevent
               />
+            </v-form>
+            <div class="text-center">
               <v-btn
                 class="mr-3"
                 color="blue-darken-4"
                 @click.prevent="clearAll"
                 >Clear</v-btn
               >
-            </v-form>
+            </div>
+              <div v-if="result && searchQuery?.length" class="mt-10">
+              <div class="text-center">
+                <h2>Search results:</h2>
+              </div> 
+              
             <div v-if="result.length">
                 <v-card
                   v-for="(result, index) in result"
@@ -45,14 +52,27 @@
                   
                 </v-card>
     </div>
+    
+    </div>
          </div>
     </div>
 </template>
 
 <script setup>
+import Fuse from "fuse.js";
+import searchIndex from "~/src/searchIndex.json";
+const searchQuery = ref("");
+const options={
+    keys:["title","summary"],
+}
+const fuse=new Fuse(searchIndex, options);
+const searchResults=ref(fuse.search(searchQuery.value));
+const handleSearch=()=>{
+    searchResults.value=fuse.search(searchQuery.value);
+};
 
 const clearAll = () => {
-  query.value = "";
+  searchQuery.value = "";
   result.value = [];
   showIndex.value = false;
   const el = document.getElementById("textfield");
