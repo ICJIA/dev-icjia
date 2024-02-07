@@ -14,8 +14,40 @@
       class="mt-0 hidden-sm-and-down"
       style="max-height: 950px"
       v-if="isMounted"
-    ></v-img> 
-            
+    >
+    <template #placeholder>
+        <v-row class="fill-height ma-0" align="center" justify="center">
+          <v-progress-circular
+            indeterminate
+            :size="70"
+            :width="7"
+            color="purple"
+            aria-label="Progress bar: Loading"
+          ></v-progress-circular>
+        </v-row>
+      </template>
+    </v-img> 
+    <v-img
+      src="/img/homesplash.jpg"
+      lazy-src="/img/homesplash.jpg"
+      cover
+      alt="Splash image"
+      class="mt-0 hidden-md-and-up"
+      style="max-height: 950px"
+      v-if="isMounted"
+    >
+      <template #placeholder>
+        <v-row class="fill-height ma-0" align="center" justify="center">
+          <v-progress-circular
+            indeterminate
+            :size="70"
+            :width="7"
+            color="purple"
+            aria-label="Progress bar: Loading"
+          ></v-progress-circular>
+        </v-row>
+      </template>
+    </v-img>        
        
     </div>
 </template>
