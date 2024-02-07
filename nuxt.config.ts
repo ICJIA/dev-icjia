@@ -24,24 +24,15 @@ export default defineNuxtConfig({
     },
   },
   content: {
- 
-    highlight: {
-        theme: 'github-dark',
-        preload: ['java','javascript']
-    },
+    documentDriven: false,
     markdown: {
-        // Configuring external link processing
-        // https://github.com/rehypejs/rehype-external-links
-        rehypePlugins: [
-            [
-                'rehype-external-links',
-                {
-                    target: '_blank',
-                    rel: 'noopener noreferer'
-                }
-            ]
-        ]
-    }
+      mdc: true,
+      anchorLinks: {
+        depth: 0,
+        exclude: [1, 2, 3, 4, 5, 6],
+      },
+    },
+    
 },
 
 nitro: {

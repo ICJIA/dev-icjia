@@ -6,7 +6,15 @@
         <br />
         <v-spacer></v-spacer>
         <TheBar v-if="isHome" :key="routePath"/>
-            <slot />
+        <v-img
+      src="/img/homesplash.jpg"
+      lazy-src="/img/homesplash.jpg"
+      cover
+      alt="Splash image"
+      class="mt-0 hidden-sm-and-down"
+      style="max-height: 950px"
+      v-if="isMounted"
+    ></v-img> 
             
        
     </div>
@@ -25,6 +33,10 @@ watchEffect(() => {
   } else {
     isHome.value = false;
   }
+});
+const isMounted = ref(false);
+onMounted(() => {
+  isMounted.value = true;
 });
 </script>
 

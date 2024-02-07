@@ -2,7 +2,7 @@
     <div
       style="
         background: #0e4474;
-        border-bottom: 1px solid #aaa;
+        border-bottom: 1px solid white;
         font-size: 13px;
         z-index: 99999 !important;
       "
@@ -54,7 +54,7 @@
   
   sections.shift();
   
-  console.log("split path: ", sections);
+  //console.log("split path: ", sections);
   
   const makeTitle = (slug) => {
     // remove initial slash
