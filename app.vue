@@ -10,10 +10,20 @@
       
       <TheSide />
       <NuxtLayout />
+      <v-main class="markdown-body" style="min-height: 80vh !important">
+      
    <NuxtPage />
-   
+   </v-main>
+  
   <TheFooter v-if="isMounted"></TheFooter>
-  <v-btn
+  <v-layout-item
+        model-value
+        position="bottom"
+        class="text-end"
+        size="88"
+        v-if="isMounted"
+      >
+   <v-btn
         v-if="isMounted"
         icon="mdi-menu-up"
         size="large"
@@ -31,6 +41,7 @@
         class="hidden-sm-and-down"
       >
       </v-btn>
+    </v-layout-item>
   </v-app>
   </div>
 </template>

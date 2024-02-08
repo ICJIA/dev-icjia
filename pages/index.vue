@@ -2,10 +2,8 @@
 
   <div style="min-height: 400px; "
     class="pt-0 pb-12">
-    <br />
-    <br />
-    <br />
-    <br />
+   
+   
     
     <v-container fluid>
       <v-row>

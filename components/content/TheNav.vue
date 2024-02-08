@@ -3,13 +3,13 @@
    <v-app-bar
      fixed
      app
-     
      class="pl-5 pr-5 py-1"
      density="default"
      style="background: #0e4474;   border-bottom: 2px solid white;"
      width="100%"        
      size="100"
      elevation="3"
+   
    >
    <div
        v-if="!nav"
