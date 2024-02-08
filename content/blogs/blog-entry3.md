@@ -9,8 +9,8 @@ summary: This blog contains a downloadable file.
 
 
 
-<div>
-<embed src = "/img/state_holidays.pdf" width="1440px" height = "900px" />
+<div style="text-align:center;">
+<embed src = "/img/state_holidays.pdf" width="1300px" height = "900px" />
 </div>
 
 <br />

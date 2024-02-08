@@ -16,8 +16,7 @@ lang: "en"
 image: "img/icjia-logo.png"
 date: 2023-01-16
 ---
-<br />
-<br />
+
 
 <div style="font-family:'Verdana, sans-serif'" align="center">
  

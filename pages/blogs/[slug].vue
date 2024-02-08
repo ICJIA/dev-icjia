@@ -1,9 +1,9 @@
 <template>
   
-  <div>
-  <v-container fluid style="margin: 0; padding: 0"
-      ><v-row no-gutters=""
-        ><v-col cols="12" md="7">
+  <div class="page-container">
+  <v-container fluid 
+      ><v-row no-gutters
+        ><v-col cols="12" md="11">
           <div v-if="data">
    <h1 style="text-align:center;">{{ data.title }}</h1>
    <ContentDoc
@@ -52,5 +52,11 @@ link:[
 </script>
 
 <style scoped>
+.page-container{
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  height:100%
+}
 
 </style>
