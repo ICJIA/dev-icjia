@@ -1,28 +1,15 @@
 <template>
 	
   <div>
-  <v-container fluid>
-      <v-row>
-        <v-col cols="12" class="text-center"
-          ><h2 class="h2-home">icjia-logo</h2>
-        
-
-        <v-container fluid>
-          <v-row align="stretch">
-            <v-col
-              v-for="item in query"
-              :key="item._id"
-              class="mb-8"
-              cols="12"
-              md="6"
-              style="display: flex; flex-direction: column"
-            >
-              <v-card-item :item="item">
-            <NuxtLink :to="item._path">
-                  {{ item.title }}
-                </NuxtLink></v-card-item>
-      </v-col> </v-row
-        ></v-container>
+  <v-container class="" fluid>
+    <v-row>
+      <v-col v-for="n in query.length" :key="n" cols="12" md="4" class="mb-8">
+        <v-card
+            elevation="10"
+            class="rounded-xl fill-height hover mx-2"
+            @click="routeTo(`/${query[n - 1].slug}`)"
+          >
+          </v-card>
       </v-col>
     </v-row>
   </v-container>
@@ -35,9 +22,7 @@ const { path } = useRoute();
 const router = useRouter();
 
 const { data: query } = await useAsyncData("pages", () =>
-queryContent("/")
-  
-  .find()
+queryContent("/").find()
 );
 useHead({
 title: 'ICJIA',
@@ -46,9 +31,7 @@ meta: [
   
 ],
 });
-definePageMeta({
-path: '/index',
-});
+
 </script>
 
 <style lang="scss" scoped>

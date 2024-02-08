@@ -18,7 +18,7 @@
       <v-col
         v-for="post in posts"
         :key="post._path"
-        cols="12" md="3"
+        cols="12" md="3" sm="6"
         class="d-flex"
       >       
      <v-card class="rounded-xl elevation-10 d-flex flex-column info-card" 
