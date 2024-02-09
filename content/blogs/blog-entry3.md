@@ -10,7 +10,7 @@ summary: This blog contains a downloadable file.
 
 
 <div style="text-align:center;">
-<embed src = "/img/state_holidays.pdf" />
+<iframe src = "/img/state_holidays.pdf" width="100%" height="700px" frameborder="0"/>
 </div>
 
 <br />
