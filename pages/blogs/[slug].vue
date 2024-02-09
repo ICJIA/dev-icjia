@@ -2,14 +2,14 @@
   
   <div class="page-container">
   <v-container fluid 
-      ><v-row no-gutters
-        ><v-col cols="12" md="11">
+      ><v-row 
+        ><v-col cols="12" md="16">
           <div v-if="data">
    <h1 style="text-align:center;">{{ data.title }}</h1>
    <ContentDoc
            :key="data?.title"
            :value="data"
-          
+          class="markdown-body mt-8 mb-5"
          >
          
    </ContentDoc>
