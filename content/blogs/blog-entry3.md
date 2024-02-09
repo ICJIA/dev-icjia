@@ -10,7 +10,8 @@ summary: This blog contains a downloadable file.
 
 
 <div style="text-align:center;">
-<iframe src = "/img/state_holidays.pdf" width="100%" height="700px" frameborder="0"/>
+<object data= "/img/state_holidays.pdf" type="application/pdf" width="100%" height="800px"></frame>
 </div>
+
 
 <br />
