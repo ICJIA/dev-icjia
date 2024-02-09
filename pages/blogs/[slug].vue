@@ -1,15 +1,16 @@
 <template>
   
-  <div class="page-container">
+  <div style="min-height: 400px; "
+    class="pt-0 pb-12">
   <v-container fluid 
       ><v-row 
-        ><v-col cols="12" md="16">
+        ><v-col cols="12" class="text-center">
           <div v-if="data">
    <h1 style="text-align:center;">{{ data.title }}</h1>
    <ContentDoc
            :key="data?.title"
            :value="data"
-          class="markdown-body mt-8 mb-5"
+          
          >
          
    </ContentDoc>
