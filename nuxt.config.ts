@@ -8,6 +8,7 @@ export default defineNuxtConfig({
   },
   modules: [
     "@nuxt/content",
+    "@pinia/nuxt",
     
 
     async (options, nuxt) => {
@@ -18,6 +19,7 @@ export default defineNuxtConfig({
     },
     //...
   ],
+  ssr:true,
   vite: {
     optimizeDeps: {
       include: ["axios", "moment", "dompurify", "fuse.js", "lodash"],
@@ -35,6 +37,7 @@ export default defineNuxtConfig({
     
 },
 
+
 nitro: {
  
   prerender: {
@@ -42,7 +45,5 @@ nitro: {
     failOnError: false, 
   },
 },
-routeRules:{
-  "/":{swr:true},
-}
+
 })

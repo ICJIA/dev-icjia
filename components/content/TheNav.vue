@@ -3,12 +3,12 @@
    <v-app-bar
      fixed
      app
-     class="pl-5 pr-5 py-1"
+     color="#0e4474"
+     class="pl-5 pr-5"
      density="default"
-     style="background: #0e4474;   border-bottom: 2px solid white;"
+     style="z-index:50;   border-bottom: 1px solid white;"
      width="100%"        
-     size="100"
-     elevation="3"
+     size="90"
    
    >
    <div
@@ -135,6 +135,7 @@
             </v-btn>
           </span> 
        </span>
+       
      </span>
      
    </v-app-bar>   

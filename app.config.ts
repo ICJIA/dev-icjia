@@ -7,11 +7,19 @@ export default defineAppConfig({
           main: "home",
           link: "/",
         },
+        {
+          main: "counter",
+          link: "/counter",
+        },
     ],
     sidebarMenu:[
         {
             main: "home",
             link: "/",
+          },
+          {
+            main: "counter",
+            link: "/counter",
           },
     ]
   })
