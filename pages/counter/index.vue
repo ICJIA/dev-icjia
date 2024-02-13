@@ -2,7 +2,7 @@
     <div class="flex flex-col justify-center mt-20">
       <h1 class="bg-gray-800 text-white text-center">Click Counter</h1>
       <p class="text-center">
-        You have clicked the button times.
+        You have clicked the button {{ counterStore.count }}times.
       </p>
       <button
         @click="counter"
@@ -13,11 +13,12 @@
     </div>
   </template>
   
-  <script setup lang="ts">
-  //import { useCounterStore } from "~/stores";
+  <script setup>
+  import { useCounterStore } from "@/stores/searchStore";
   
- // const counterStore = useCounterStore();
+  
+  const counterStore = useCounterStore();
   const counter = () => {
-   // counterStore.increment();
+   counterStore.increment();
   };
   </script>
