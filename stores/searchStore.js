@@ -1,4 +1,4 @@
-import { defineStore, acceptHMRUpdate } from 'pinia';
+import { defineStore } from 'pinia';
 import {ref} from 'vue';
 
 export const useCounterStore=defineStore("counter",{
@@ -13,6 +13,3 @@ export const useCounterStore=defineStore("counter",{
         },
     },
 });
-if (import.meta.hot) {
-    import.meta.hot.accept(acceptHMRUpdate(useSearchStore, import.meta.hot));
-  }
