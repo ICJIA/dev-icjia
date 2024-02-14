@@ -5,6 +5,10 @@
             <span>Click Me!</span>
             </v-btn>
         <p> You clicked {{ store.count }} times.</p>
+        <v-btn depressed style="font-size: 20px;" @click="store.reset">
+           
+            <span>Reset</span>
+            </v-btn>
     </div>
 </template>
 
@@ -13,7 +17,8 @@ import { useCounterStore } from "@/stores/searchStore";
 const store = useCounterStore();
 definePageMeta({
   layout: 'content'
-})
+});
+
 
 </script>
 
