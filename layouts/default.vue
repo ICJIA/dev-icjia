@@ -4,7 +4,6 @@
         <br />
         <br />
         <br />
-        <v-spacer></v-spacer>
         <TheBar v-if="isHome" :key="routePath"/>
         <v-img
       src="/img/homesplash.jpg"
@@ -47,8 +46,9 @@
           ></v-progress-circular>
         </v-row>
       </template>
-    </v-img>        
-       
+    </v-img>
+      
+ 
     </div>
 </template>
 

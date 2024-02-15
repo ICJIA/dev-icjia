@@ -1,7 +1,6 @@
 <template>
 
-  <div style="min-height: 400px; "
-    class="pt-0 pb-12">
+ <div>
    
    
     

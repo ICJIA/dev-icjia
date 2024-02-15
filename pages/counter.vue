@@ -1,17 +1,33 @@
 <template>
 <div id="app">
     <v-app id="inspire">
-        <v-row align="center" justify="space-around">
-        <v-btn depressed color="" style="font-weight: 900 !important; font-size: 16px" @click="store.increment" class="hover">
-            <v-icon left>email</v-icon>
+        <v-container fluid 
+      >
+      <v-row no-gutters>
+        <v-col cols="4">
+        <v-sheet class="pa-2 ma-2">
+        <v-btn depressed color="primary" style="font-weight: 900 !important; font-size: 16px" @click="store.increment" class="hover">
+            
             <span>Click Me!</span>
             </v-btn>
-        <p> You clicked {{ store.count }} times.</p>
-        <v-btn depressed class="hover" style="font-weight: 900 !important; font-size: 16px" @click="store.reset">
+        </v-sheet>
+        </v-col>
+        <v-col>
+            <v-sheet class="pa-2 ma-2">
+        <p> 
+            You clicked {{ store.count }} times.</p>
+        </v-sheet>
+            </v-col>
+            <v-col cols="4">
+                <v-sheet class="pa-2 ma-2">    
+        <v-btn depressed class="hover" color="primary" style="font-weight: 900 !important; font-size: 16px" @click="store.reset">
            
             <span>Reset</span>
             </v-btn>
+            </v-sheet>
+        </v-col>
         </v-row>
+    </v-container>
         </v-app>
     </div>
 </template>
