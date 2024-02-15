@@ -5,8 +5,8 @@
      app
      color="#0e4474"
      class="pl-5 pr-5"
-     density="default"
-     style="z-index:50;   border-bottom: 1px solid white;"
+     
+     style="z-index:50;   border-bottom: 1px solid ;"
      width="100%"        
      size="90"
    

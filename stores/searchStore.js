@@ -1,4 +1,4 @@
-import { defineStore } from 'pinia';
+import { defineStore,acceptHMRUpdate } from 'pinia';
 import {ref} from 'vue';
 
 export const useCounterStore=defineStore("counter",{
@@ -21,3 +21,6 @@ export const useCounterStore=defineStore("counter",{
   
    persist:true,
 });
+if (import.meta.hot) {
+    import.meta.hot.accept(acceptHMRUpdate(useCounterStore, import.meta.hot));
+  }
