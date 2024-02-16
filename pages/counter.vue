@@ -1,34 +1,36 @@
 <template>
-<div id="app">
-    <v-app id="inspire">
-        <v-container fluid 
-      >
-      <v-row no-gutters>
-        <v-col cols="4">
-        <v-sheet class="pa-2 ma-2">
-        <v-btn depressed color="primary" style="font-weight: 900 !important; font-size: 16px" @click="store.increment" class="hover">
-            
-            <span>Click Me!</span>
-            </v-btn>
-        </v-sheet>
-        </v-col>
-        <v-col>
-            <v-sheet class="pa-2 ma-2">
-        <p> 
-            You clicked {{ store.count }} times.</p>
-        </v-sheet>
-            </v-col>
-            <v-col cols="4">
-                <v-sheet class="pa-2 ma-2">    
-        <v-btn depressed class="hover" color="primary" style="font-weight: 900 !important; font-size: 16px" @click="store.reset">
-           
-            <span>Reset</span>
-            </v-btn>
-            </v-sheet>
-        </v-col>
+<div >
+  <v-container>
+    <v-row>
+        <v-col cols="12"><h1 style="text-center">Counter Page</h1></v-col>
+        <v-col cols="12">
+            <v-card class="" style="margin-top: -25px">
+                <v-img
+                cover
+                crossorigin
+                src="/img/count.jpg"
+                aspect-ratio="1"
+                class="green-lighten-5"
+                height="500"
+                >
+                <div class="text-center px-12" style="margin-top: 100px">
+                <h1 class="nofo-title mt-3">{{ store.count }}</h1>
+                <v-btn
+                    variant="flat"
+                    color="green-darken-4"
+                    class="text-none mb-4"
+                    target="_blank"
+                    rounded="sm"
+                    @click="store.increment"
+                >Click Me!</v-btn>
+                </div>
+                
+                </v-img>
+            </v-card>
+            </v-col>   
         </v-row>
-    </v-container>
-        </v-app>
+  </v-container>
+       
     </div>
 </template>
 
@@ -45,6 +47,7 @@ meta: [
   
 ],
 });
+const isMounted = ref(true);
 
 </script>
 
