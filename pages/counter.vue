@@ -16,7 +16,7 @@
                 height="300"
                 >
                 <div class="text-center px-12" style="margin-top: 90px">
-                <h1 class="nofo-title mt-3" style="color:rgb(171, 190, 188)">You have Clicked {{ store.count }} times!</h1>
+                <h1 class="nofo-title mt-3" style="color:rgb(24, 27, 30)">You have Clicked {{ store.count }} times!</h1>
                 <v-divider
         :thickness="5"
         class="border-opacity-25"
