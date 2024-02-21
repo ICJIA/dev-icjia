@@ -1,5 +1,5 @@
 import { defineStore,acceptHMRUpdate } from 'pinia';
-import {ref} from 'vue';
+import { watch } from 'vue';
 
 export const useCounterStore=defineStore("counter",{
    state:() =>({
@@ -7,9 +7,7 @@ export const useCounterStore=defineStore("counter",{
     count: 0,
    
    }),
-   getters:{
-        getInvoices: (state) => state.counter,
-   },
+   
     actions: {
         increment(){
             this.count++;
@@ -18,8 +16,12 @@ export const useCounterStore=defineStore("counter",{
             this.count=0;
         }
     },
-  
-   persist:true,
+   //watch(useCounterStore,(state) =>{
+    //localStorage.setItem('counter',JSON.stringify(state.count));
+   //},{deep: true});
+   persist:{
+    storage: persistedState.localStorage,
+   },
 });
 if (import.meta.hot) {
     import.meta.hot.accept(acceptHMRUpdate(useCounterStore, import.meta.hot));
