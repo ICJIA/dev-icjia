@@ -47,7 +47,11 @@
 
 <script setup>
 import { useCounterStore } from "@/stores/searchStore"; 
+import { watch } from "vue";
 const store = useCounterStore();
+watch(store,(state) =>{
+    localStorage.setItem('counter',state.count);
+},{deep:true});
 definePageMeta({
   layout: 'content'
 });
@@ -64,8 +68,6 @@ const isMounted = ref(true);
 
 <style scoped>
 
-.hover {
-    cursor: pointer
-}
+
 
 </style>
