@@ -19,7 +19,7 @@ export default defineNuxtConfig({
     },
     //...
   ],
-  ssr:false,
+  ssr:true,
   vite: {
     optimizeDeps: {
       include: ["axios", "moment", "dompurify", "fuse.js", "lodash"],
