@@ -52,6 +52,7 @@ const store = useCounterStore();
 watch(store,(state) =>{
     localStorage.setItem('counter',state.count);
 },{deep:true});
+
 definePageMeta({
   layout: 'content'
 });
