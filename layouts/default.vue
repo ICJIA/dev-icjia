@@ -1,12 +1,14 @@
 <template>
     
   <div>
-  
-    <v-main style="min-height: 20vh !important">
+  <br />
+  <br />
+  <br />
+    
       <TheBar v-if="isHome" :key="routePath"/>
-    </v-main>
+  
      
-
+    <Splash :key="Math.random()"></Splash>
  
  
 
