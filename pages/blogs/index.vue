@@ -22,7 +22,9 @@ const { path } = useRoute();
 const router = useRouter();
 
 const { data: query } = await useAsyncData("pages", () =>
-queryContent("/").find()
+queryContent("/")
+  
+  .find()
 );
 useHead({
 title: 'ICJIA',
