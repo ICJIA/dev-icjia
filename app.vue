@@ -11,7 +11,7 @@
       <TheSide />
       <NuxtLayout />
       <v-main class="markdown-body" style="min-height: 80vh !important">
-      
+        <StyleSwitcher />
    <NuxtPage />
    </v-main>
   

@@ -133,9 +133,11 @@
 </template>
 
 <script setup>
-
+definePageMeta({
+  layout: 'content'
+});
 const route= useRoute()
-const {data} = await useAsyncData('blogs',() =>queryContent('/').findOne())
+const {data} = await useAsyncData('home',() =>queryContent('/blogs').find())
 </script>
 
 <style scoped>
