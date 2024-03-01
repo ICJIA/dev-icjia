@@ -9,7 +9,7 @@ import 'vue3-perfect-scrollbar/dist/vue3-perfect-scrollbar.css'
 export default defineNuxtPlugin((app) => {
   const vuetify = createVuetify({
     theme: {
-      defaultTheme: 'myCustomLightTheme',
+      defaultTheme: 'light',
       themes:{
         myCustomLightTheme,
       }
