@@ -25,16 +25,19 @@
 <script setup>
 import { useTheme } from 'vuetify'
 import { useThemeStore } from '@/stores/searchStore'
-let isMounted = ref(false);
+const isMounted = ref(false);
+const themeStore = useThemeStore();
 const theme = useTheme();
 
 const toggleTheme = () => {
-    
-  theme.global.name.value = theme.global.current.value.dark ? 'light' : 'dark'
+   themeStore.toggleTheme(); 
+   theme.global.name.value=themeStore.isDarkTheme ? 'dark' : 'light';
+ // theme.global.name.value = theme.global.current.value.dark ? 'light' : 'dark'
 
 }
 onMounted(() => {
   isMounted.value = true;
+  theme.global.name.value=themeStore.isDarkTheme ? 'dark' : 'light';
 });
   
 

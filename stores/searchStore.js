@@ -21,7 +21,7 @@ export const useCounterStore=defineStore("counter",{
 });
 export const useThemeStore=defineStore('theme',{
     state:()=>({
-        isDarkTheme: localStorage.getItem('theme') === 'dark' ?true:false,
+        isDarkTheme: localStorage.getItem('theme') === 'dark' ,
     }),
     actions:{
        toggleTheme(){
