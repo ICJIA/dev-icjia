@@ -130,6 +130,17 @@
 </v-col>
 </v-row>
   </div>
+  <v-btn 
+
+	icon="mdi-theme-light-dark"
+	size="large"
+	color="primary"
+	elevation="8"
+	@click="toggleSystemTheme"
+
+      >
+      </v-btn>
+                 
 </template>
 
 <script setup>

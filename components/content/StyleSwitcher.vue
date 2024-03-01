@@ -38,8 +38,16 @@ const toggleTheme = () => {
 onMounted(() => {
   isMounted.value = true;
   theme.global.name.value=themeStore.isDarkTheme ? 'dark' : 'light';
+ // setThemeBasedOnUserPreference();
 });
-  
+function setThemeBasedOnUserPreference(){
+  const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+  theme.global.neme.value = prefersDarkScheme.matches ? 'dark': 'light';
+
+  prefersDarkScheme.addEventListener((e) => {
+    theme.global.name.value = e.matches ? 'dark':'light';
+  });
+}  
 
 </script>
 
