@@ -131,7 +131,7 @@
 </v-row>
   </div>
   <v-btn 
-
+  v-model="isDarkMode"
 	icon="mdi-theme-light-dark"
 	size="large"
 	color="primary"
@@ -149,6 +149,36 @@ definePageMeta({
 });
 const route= useRoute()
 const {data} = await useAsyncData('home',() =>queryContent('/blogs').find())
+import { ref, watch, onMounted } from 'vue';
+
+const isDarkMode = ref(false);
+
+const updateTheme = (darkMode) => {
+  document.documentElement.classList.toggle('dark', darkMode);
+  localStorage.setItem('darkMode', darkMode ? '1' : '0');
+};
+
+watch(isDarkMode, (newVal) => {
+  updateTheme(newVal);
+});
+
+const systemThemeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+
+systemThemeMediaQuery.addEventListener('change', (event) => {
+  isDarkMode.value = event.matches;
+});
+
+const toggleSystemTheme = () => {
+  isDarkMode.value = systemThemeMediaQuery.matches;
+  updateTheme(isDarkMode.value);
+};
+
+onMounted(() => {
+  const storedTheme = localStorage.getItem('darkMode');
+  if (storedTheme === '1') {
+    isDarkMode.value = true;
+  }
+});
 </script>
 
 <style scoped>

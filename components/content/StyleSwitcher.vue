@@ -15,7 +15,7 @@
         "
 	      position="fixed"
         location="bottom left"
-        class="hidden-sm-and-down"
+       
       >
       </v-btn>
                                         
@@ -37,6 +37,7 @@ const toggleTheme = () => {
 }
 onMounted(() => {
   isMounted.value = true;
+
   theme.global.name.value=themeStore.isDarkTheme ? 'dark' : 'light';
  // setThemeBasedOnUserPreference();
 });

@@ -1,23 +1,55 @@
 // import this after install `@mdi/font` package
 import '@mdi/font/css/materialdesignicons.css'
-
+import "vuetify/lib/styles/main.sass";
+import colors from 'vuetify/util/colors';
 import 'vuetify/styles'
 import { createVuetify } from 'vuetify'
 import { createApp } from 'vue'
-import PerfectScrollbar from "vue3-perfect-scrollbar";
-import 'vue3-perfect-scrollbar/dist/vue3-perfect-scrollbar.css'
+
+
 export default defineNuxtPlugin((app) => {
   const vuetify = createVuetify({
     theme: {
-      defaultTheme: 'light',
-      themes:{
-        myCustomLightTheme,
-      }
-    }
+      themes: {
+        light: {
+          colors: {
+            primary: colors.blue.darken2,
+            secondary: colors.orange.lighten1,
+            "on-secondary": colors.orange.darken3,
+            background: colors.blue.lighten5,
+            "on-background": colors.grey.darken4,
+            error: colors.red.accent3,
+            info: colors.orange.darken2,
+            success: colors.green.accent3,
+            surface: colors.orange.lighten2,
+            warning: colors.red.accent3,
+            cardColor:colors.shades.white,
+          },
+          dark: false,
+          variables: {},
+        },
+        dark: {
+          colors: {
+            primary: colors.orange.lighten2,
+            secondary: colors.orange.darken1,
+            "on-secondary": colors.orange.lighten1,
+            background: colors.blueGrey.darken4,
+            "on-background": colors.grey.lighten2,
+            error: colors.red.accent3,
+            info: colors.orange.lighten2,
+            success: colors.green.accent3,
+            surface: colors.orange.darken2,
+            warning: colors.red.accent3,
+          },
+          dark: true,
+          variables: {},
+        },
+      },
+    },
     
   });
   
-  app.vueApp.use(PerfectScrollbar);
+ 
   app.vueApp.use(vuetify)
 });
 const myCustomLightTheme = {
