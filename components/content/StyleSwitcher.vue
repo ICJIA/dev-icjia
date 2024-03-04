@@ -38,7 +38,7 @@ const toggleTheme = () => {
 onMounted(() => {
   isMounted.value = true;
 
-  //theme.global.name.value=themeStore.isDarkTheme ? 'dark' : 'light';
+  theme.global.name.value=themeStore.isDarkTheme ? 'dark' : 'light';
  // setThemeBasedOnUserPreference();
 });
 function setThemeBasedOnUserPreference(){
