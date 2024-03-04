@@ -10,21 +10,23 @@
           
   </div>
 </template>
-
+ 
 <script setup>
 import { useTheme } from 'vuetify'
 const theme = useTheme();
 const darkMode = ref(false);
-
 const toggleTheme = () => {
-  theme.global.name.value = darkMode.value ? "dark" : "light";
-  // Optional: Get value of current theme
-  //console.log(`Current theme is dark? ${theme.global.current.value.dark}`);
+ theme.global.name.value = darkMode.value ? "dark" : "light";
+ localStorage.setItem('darkMode', darkMode.value);
 };
-
-
+const loadThemePreference = () => {
+ darkMode.value = localStorage.getItem('darkMode') === 'true';
+ theme.global.name.value = darkMode.value ? "dark" : "light"; // Set initial theme based on stored value
+}
+loadThemePreference(); // Call on component mount // Call on component mount
+ 
 </script>
-
+ 
 <style scoped>
-
+ 
 </style>
