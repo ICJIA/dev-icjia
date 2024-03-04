@@ -12,11 +12,11 @@
 
       <v-main class="markdown-body" style="min-height: 80vh !important">
       
-      <StyleSwitcher />
+     
       
    <NuxtPage />
    </v-main>
-  
+   <StyleSwitcher />
   <TheFooter v-if="isMounted"></TheFooter>
   <v-layout-item
         model-value
