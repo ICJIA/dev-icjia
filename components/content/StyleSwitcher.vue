@@ -1,42 +1,28 @@
 <template>
   <div>
-    <v-btn 
-		v-if="isMounted"
-	icon="mdi-theme-light-dark"
-	size="large"
-	color="primary"
-	elevation="8"
-@click="toggleTheme()"
-	style="font-size: 30px;
-          margin-bottom: 30px;
-          margin-right: 30px;
-          z-index: 9999;
-        "
-	      position="fixed"
-        location="bottom left"
-       
-      >
-      </v-btn>
+    <v-switch
+            inset
+            color="info"
+            v-model="darkMode"
+            @change="toggleTheme()"
+            :label="`It's ${darkMode ? 'Dark' : 'Light'}!`"
+          ></v-switch>
+          
   </div>
 </template>
 
 <script setup>
 import { useTheme } from 'vuetify'
-const isMounted = ref(false);
-const themeStore = useThemeStore();
 const theme = useTheme();
+const darkMode = ref(false);
+
 const toggleTheme = () => {
-   themeStore.toggleTheme(); 
-   theme.global.name.value=themeStore.isDarkTheme ? 'dark' : 'light';
- // theme.global.name.value = theme.global.current.value.dark ? 'light' : 'dark'
+  theme.global.name.value = darkMode.value ? "dark" : "light";
+  // Optional: Get value of current theme
+  //console.log(`Current theme is dark? ${theme.global.current.value.dark}`);
+};
 
-}
-onMounted(() => {
-  isMounted.value = true;
 
-  //theme.global.name.value=themeStore.isDarkTheme ? 'dark' : 'light';
-
-});
 </script>
 
 <style scoped>
