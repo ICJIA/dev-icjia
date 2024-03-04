@@ -19,7 +19,7 @@ export default defineNuxtConfig({
     },
     //...
   ],
-  ssr:true,
+  ssr:false,
 
 
   vite: {
