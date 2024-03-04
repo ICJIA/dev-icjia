@@ -21,8 +21,7 @@
 </template>
 
 <script setup>
-const isMounted = ref(false);
-const themeStore = useThemeStore();
+
 </script>
 
 <style scoped>
