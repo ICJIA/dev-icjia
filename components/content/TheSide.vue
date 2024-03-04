@@ -69,7 +69,7 @@
   const { isTranslationEnabled } = useAppConfig();
 const appConfig = useAppConfig();
 const sideMenu = JSON.parse(JSON.stringify(appConfig.sidebarMenu));
-  const isMounted = ref(false);
+const isMounted = ref(false);
 const drawer = ref(false);
 const open = ref([]);
 const altState = useNavToggle();

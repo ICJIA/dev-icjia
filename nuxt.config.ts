@@ -19,7 +19,7 @@ export default defineNuxtConfig({
     },
     //...
   ],
-  ssr:false,
+  ssr:true,
  
   vite: {
     optimizeDeps: {
@@ -40,6 +40,9 @@ export default defineNuxtConfig({
 pinia:{
   storesDirs:['./stores/**'],
 },
+
+
+
 
 nitro: {
  
