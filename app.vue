@@ -7,11 +7,13 @@
     
 
       <TheNav />
-      
       <TheSide />
       <NuxtLayout />
+
       <v-main class="markdown-body" style="min-height: 80vh !important">
-        <StyleSwitcher />
+      
+      <!-- <StyleSwitcher /> -->
+
    <NuxtPage />
    </v-main>
   
