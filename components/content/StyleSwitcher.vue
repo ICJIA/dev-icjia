@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-btn 
-	
+		v-if="isMounted"
 	icon="mdi-theme-light-dark"
 	size="large"
 	color="primary"
@@ -21,7 +21,22 @@
 </template>
 
 <script setup>
+import { useTheme } from 'vuetify'
+const isMounted = ref(false);
+const themeStore = useThemeStore();
+const theme = useTheme();
+const toggleTheme = () => {
+   themeStore.toggleTheme(); 
+   theme.global.name.value=themeStore.isDarkTheme ? 'dark' : 'light';
+ // theme.global.name.value = theme.global.current.value.dark ? 'light' : 'dark'
 
+}
+onMounted(() => {
+  isMounted.value = true;
+
+  //theme.global.name.value=themeStore.isDarkTheme ? 'dark' : 'light';
+
+});
 </script>
 
 <style scoped>
