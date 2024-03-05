@@ -162,11 +162,7 @@ watch(isDarkMode, (newVal) => {
   updateTheme(newVal);
 });
 
-const systemThemeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
-systemThemeMediaQuery.addEventListener('change', (event) => {
-  isDarkMode.value = event.matches;
-});
 
 const toggleSystemTheme = () => {
   isDarkMode.value = systemThemeMediaQuery.matches;
@@ -174,6 +170,11 @@ const toggleSystemTheme = () => {
 };
 
 onMounted(() => {
+  const systemThemeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+
+systemThemeMediaQuery.addEventListener('change', (event) => {
+  isDarkMode.value = event.matches;
+});
   const storedTheme = localStorage.getItem('darkMode');
   if (storedTheme === '1') {
     isDarkMode.value = true;

@@ -23,7 +23,11 @@ const loadThemePreference = () => {
  darkMode.value = localStorage.getItem('darkMode') === 'true';
  theme.global.name.value = darkMode.value ? "dark" : "light"; // Set initial theme based on stored value
 }
-loadThemePreference(); // Call on component mount // Call on component mount
+onMounted(() => {
+  loadThemePreference(); 
+   // <div>
+})
+// Call on component mount // Call on component mount
  
 </script>
  

@@ -20,7 +20,7 @@
 <script setup>
 const { path } = useRoute();
 const router = useRouter();
-
+const isMounted = ref(false);
 const { data: query } = await useAsyncData("pages", () =>
 queryContent("/")
   
@@ -33,7 +33,9 @@ meta: [
   
 ],
 });
-
+onMounted(() => {
+  isMounted.value = true;
+});
 </script>
 
 <style lang="scss" scoped>

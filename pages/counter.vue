@@ -64,7 +64,10 @@ meta: [
 ],
 });
 const isMounted = ref(true);
-
+onMounted (() =>
+{
+  isMounted.value = true;
+})
 </script>
 
 <style scoped>

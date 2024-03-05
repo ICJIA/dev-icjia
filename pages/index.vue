@@ -15,8 +15,9 @@
      <v-container fluid>
      <v-row >
        <v-col
-         v-for="post in posts"
-         :key="post._path"
+         v-for="item in posts"
+         :key="item"
+        
          cols="12" md="3" sm="6"
          class="d-flex"
        >       
@@ -24,19 +25,18 @@
              style="width: 100%"
              color="#dde7f0"
              hover
+             @click="routeToNews(item)"
              >
              
            <v-card-title class="heavy-900">
                <p class="mt-4"  color="white">
-                 <NuxtLink :to="post._path">
-                   {{ post.title }}
-                 </NuxtLink>
+               {{ item.title }}
                </p>
            </v-card-title>
            
-           <v-card-text class="pre-wrap">{{ post.summary }}</v-card-text>
+           <v-card-text class="pre-wrap">{{ item.summary }}</v-card-text>
            <v-card-actions>
-         <v-btn :to="post._path">Click me</v-btn>
+         <v-btn @click="routeToNews(item)">Click me</v-btn>
          
        </v-card-actions>
          </v-card>
@@ -52,9 +52,20 @@
  </template>
  
  <script setup>
- const {data:posts} =await useAsyncData('/',() =>
- queryContent('/blogs').find()
- )
+  const isMounted =ref(false);
+  const { path } = useRoute();
+  const routeToNews = (item) => {
+  router.push(`/blogs/${item.slug}`);
+};
+
+ const {data:posts} =await useAsyncData('/', () =>
+ queryContent('/blogs').find())
+ 
+
+
+
+ 
+
  const drawer = ref(false);
  definePageMeta({
    layout:'default'
@@ -67,6 +78,9 @@
    
  ],
  });
+ onMounted(() => {
+  isMounted.value = true;
+});
  </script>
  
  <style lang="scss" scoped>
