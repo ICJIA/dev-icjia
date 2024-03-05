@@ -52,16 +52,19 @@
  </template>
  
  <script setup>
+import { useRouter } from 'vue-router'
+
   const isMounted =ref(false);
-  const { path } = useRoute();
+  const router = useRouter();
+  
   const routeToNews = (item) => {
-  router.push(`/blogs/${item.slug}`);
+  router.push('/blogs/');
+  console.log ("Test")
 };
 
- const {data:posts} =await useAsyncData('/', () =>
- queryContent('/blogs').find())
+ const {data:posts} =await useAsyncData("content-blogs", () =>
+ queryContent('/blogs/').find());
  
-
 
 
  
