@@ -19,9 +19,8 @@ export default defineNuxtConfig({
     },
     //...
   ],
-  ssr:false,
-
-
+  ssr:true,
+ target: 'server',
   vite: {
     optimizeDeps: {
       include: ["axios", "moment", "dompurify", "fuse.js", "lodash"],
@@ -41,9 +40,6 @@ export default defineNuxtConfig({
 pinia:{
   storesDirs:['./stores/**'],
 },
-
-
-
 
 nitro: {
  
