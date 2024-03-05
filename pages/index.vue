@@ -28,7 +28,7 @@
              
            <v-card-title class="heavy-900">
                <p class="mt-4"  color="white">
-                 <NuxtLink :to="post._path" :class="{ underline: path === ''}">
+                 <NuxtLink :to="post._path">
                    {{ post.title }}
                  </NuxtLink>
                </p>
