@@ -7,8 +7,3 @@
   ##  X-Content-Type-Options = "nosniff"
     Access-Control-Allow-Origin = "*"
     X-Greeting = "Hello from Chicago!"
-
-[[redirects]]
-  from = "/*"
-  to = "/"
-  status = 200
