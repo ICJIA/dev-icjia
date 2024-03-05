@@ -29,10 +29,16 @@ if (route.path === "/") {
   isHome.value = false;
 }
 });
+
+console.log(isHome.value)
+
 const isMounted = ref(false);
 onMounted(() => {
 isMounted.value = true;
 });
+
+console.log(isMounted.value)
+
 </script>
 
 <style lang="scss" scoped>
