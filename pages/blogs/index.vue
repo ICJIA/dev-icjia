@@ -21,7 +21,7 @@
 const { path } = useRoute();
 const router = useRouter();
 const isMounted = ref(false);
-const { data: query } = await useAsyncData("pages", () =>
+const { data: query } = await useAsyncData("blogs", () =>
 queryContent("/")
   
   .find()

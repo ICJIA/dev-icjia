@@ -25,7 +25,7 @@
              style="width: 100%"
              color="#dde7f0"
              hover
-             @click="routeToNews(item)"
+             @click="routeToNews(item._path)"
              >
              
            <v-card-title class="heavy-900">
@@ -36,7 +36,7 @@
            
            <v-card-text class="pre-wrap">{{ item.summary }}</v-card-text>
            <v-card-actions>
-         <v-btn @click="routeToNews(item)">Click me</v-btn>
+         <v-btn @click="routeToNews(item._path)">Click me</v-btn>
          
        </v-card-actions>
          </v-card>
@@ -58,16 +58,12 @@ import { useRouter } from 'vue-router'
   const router = useRouter();
   
   const routeToNews = (item) => {
-  router.push('/blogs/');
-  console.log ("Test")
+  router.push(`${item}`);
+  console.log (router._path)
 };
 
- const {data:posts} =await useAsyncData("content-blogs", () =>
+ const {data:posts} =await useAsyncData("content/blogs", () =>
  queryContent('/blogs/').find());
- 
-
-
- 
 
  const drawer = ref(false);
  definePageMeta({
