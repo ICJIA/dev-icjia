@@ -19,17 +19,20 @@ export const useCounterStore=defineStore("counter",{
    // storage: persistedState.localStorage,
   // },
 });
+
+
+
 export const useThemeStore=defineStore('theme',{
     state:()=>({
-        isDarkTheme: localStorage.getItem('theme') === 'dark' ,
+       isDarkTheme: localStorage.getItem('theme') === 'dark' ,
     }),
     actions:{
        toggleTheme(){
             this.isDarkTheme =! this.isDarkTheme;
             localStorage.setItem('theme',this.isDarkTheme ? 'dark' : 'light')
             },
-        },
-    });
+       },
+   });
 if (import.meta.hot) {
     import.meta.hot.accept(acceptHMRUpdate(useCounterStore, import.meta.hot));
   }
