@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import vuetify from "vite-plugin-vuetify";
+
 export default defineNuxtConfig({
   
   devtools: { enabled: true },
@@ -20,7 +21,7 @@ export default defineNuxtConfig({
     //...
   ],
   ssr:false,
- 
+  target: 'static',
   vite: {
     optimizeDeps: {
       include: ["axios", "moment", "dompurify", "fuse.js", "lodash"],
@@ -42,7 +43,9 @@ pinia:{
 },
 
 nitro: {
- 
+  commands: {
+    preview: 'npx serve .output/public'
+  },
   prerender: {
     crawlLinks: true,
     failOnError: false, 
