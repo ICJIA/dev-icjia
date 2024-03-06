@@ -3,11 +3,12 @@ import { watch } from 'vue';
 
 export const useCounterStore=defineStore("counter",{
     state: () => ({
-        count: parseInt(localStorage.getItem('counter')) || 0,
+        count:  0,
 }),
    actions:{
     increment(){
         this.count++;
+       
     },
     reset(){
         this.count=0;
@@ -15,9 +16,9 @@ export const useCounterStore=defineStore("counter",{
     
    },
 
-  // persist:{
-   // storage: persistedState.localStorage,
-  // },
+  persist:{
+ storage: persistedState.localStorage,
+  },
 });
 
 

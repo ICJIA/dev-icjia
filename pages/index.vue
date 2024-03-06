@@ -15,8 +15,9 @@
      <v-container fluid>
      <v-row >
        <v-col
-         v-for="post in posts"
-         :key="post"
+         v-for="item in posts"
+         :key="item"
+        
          cols="12" md="3" sm="6"
          class="d-flex"
        >       
@@ -24,20 +25,18 @@
              style="width: 100%"
              color="#dde7f0"
              hover
-             @click="routeTo(post)"
+             @click="routeToNews(item._path)"
              >
              
            <v-card-title class="heavy-900">
                <p class="mt-4"  color="white">
-             
-                   {{ post.title }}
-             
+               {{ item.title }}
                </p>
            </v-card-title>
            
-           <v-card-text class="pre-wrap">{{ post.summary }}</v-card-text>
+           <v-card-text class="pre-wrap">{{ item.summary }}</v-card-text>
            <v-card-actions>
-         <v-btn :to="post">Click me</v-btn>
+         <v-btn @click="routeToNews(item._path)">Click me</v-btn>
          
        </v-card-actions>
          </v-card>
@@ -53,21 +52,28 @@
  </template>
  
  <script setup>
-  const router = useRouter()
+import { useRouter } from 'vue-router'
+
+
+  const isMounted =ref(false);
+  const router = useRouter();
   const { path } = useRoute();
-const { data:posts } = await useAsyncData('blogs',()=>
-queryContent('/blogs').find()
-)
- 
+
+ const {data:posts} =await useAsyncData("/blogs", () => queryContent('/blogs').find());
+
+ const routeToNews = (item) => {
+  console.log (item);
+  if (item) {
+    router.push(item);
+  } else {
+    console.error('Invalid Route path', item)
+  }
+};
+
  const drawer = ref(false);
  definePageMeta({
    layout:'default'
  })
- const routeTo = (item) => {
- 
-    router.push(item._path);
- 
-};
  
  useHead({
  title: 'ICJIA',
@@ -76,6 +82,9 @@ queryContent('/blogs').find()
    
  ],
  });
+ onMounted(() => {
+  isMounted.value = true;
+});
  </script>
  
  <style lang="scss" scoped>
