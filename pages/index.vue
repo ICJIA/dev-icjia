@@ -55,11 +55,11 @@
 import { useRouter } from 'vue-router'
 
   const isMounted =ref(false);
-  const router = useRouter();
+  const router1 = useRouter();
   
   const routeToNews = (item) => {
-  router.push(`${item}`);
-  console.log (router._path)
+  router1.push(`${item}`);
+  console.log (router1._path)
 };
 
  const {data:posts} =await useAsyncData("content/blogs", () =>
