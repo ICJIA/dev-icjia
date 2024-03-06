@@ -63,7 +63,11 @@ import { useRouter } from 'vue-router'
 
  const routeToNews = (item) => {
   console.log (item);
-  router1.push(item);
+  if (item) {
+    router1.push(item);
+  } else {
+    console.error('Invalid Route path', item)
+  }
 };
 
  const drawer = ref(false);
