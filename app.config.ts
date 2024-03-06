@@ -11,6 +11,10 @@ export default defineAppConfig({
           main: "counter",
           link: "/counter",
         },
+        {
+          main: "news",
+          link: "/news",
+        },
     ],
     sidebarMenu:[
         {
@@ -20,6 +24,10 @@ export default defineAppConfig({
           {
             main: "counter",
             link: "/counter",
+          },
+          {
+            main: "news",
+            link: "/news",
           },
     ]
   })
