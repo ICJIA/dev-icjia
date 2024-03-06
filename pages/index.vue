@@ -59,7 +59,7 @@ import { useRouter } from 'vue-router'
   const router1 = useRouter();
   const { path } = useRoute();
 
- const {data:posts} =await useAsyncData("content/blogs", () => queryContent('/blogs').find());
+ const {data:posts} =await useAsyncData("/blogs", () => queryContent('/blogs').find());
 
  const routeToNews = (item) => {
   console.log (item);
