@@ -53,7 +53,7 @@
 const route = useRoute();
 const routePath = ref(route.path);
 
-let isMounted = ref(false);
+const isMounted = ref(false);
 const scrollToTop = () => {
   if (!isMounted.value) {
     return;
