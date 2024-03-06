@@ -54,16 +54,17 @@
  <script setup>
 import { useRouter } from 'vue-router'
 
+
   const isMounted =ref(false);
   const router1 = useRouter();
-  
-  const routeToNews = (item) => {
-  router1.push(`${item}`);
-  console.log (router1._path)
-};
+  const { path } = useRoute();
 
- const {data:posts} =await useAsyncData("content/blogs", () =>
- queryContent('/blogs/').find());
+ const {data:posts} =await useAsyncData("content/blogs", () => queryContent('/blogs').find());
+
+ const routeToNews = (item) => {
+  console.log (item);
+  router1.push(item);
+};
 
  const drawer = ref(false);
  definePageMeta({
