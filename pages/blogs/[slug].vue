@@ -15,7 +15,7 @@
          
    </ContentDoc>
    </div>
-   <div v-else>{{ redirect() }}</div>
+   <!--<div v-else>{{ redirect() }}</div> -->
    </v-col>
    </v-row>
    </v-container>
@@ -32,6 +32,7 @@ if(!data.value){
   throw showError({statusCode:404,statusMessage:"Page Not Found",fatal:true});
 }
 const redirect = () => {
+  console.log("Redirect")
 router.push("/404");
 };
 definePageMeta({
