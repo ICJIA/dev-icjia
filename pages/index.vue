@@ -15,9 +15,8 @@
      <v-container fluid>
      <v-row >
        <v-col
-         v-for="item in posts"
-         :key="item"
-        
+         v-for="post in posts"
+         :key="post"
          cols="12" md="3" sm="6"
          class="d-flex"
        >       
@@ -25,18 +24,20 @@
              style="width: 100%"
              color="#dde7f0"
              hover
-             @click="routeToNews(item._path)"
+             @click="routeTo(post)"
              >
              
            <v-card-title class="heavy-900">
                <p class="mt-4"  color="white">
-               {{ item.title }}
+             
+                   {{ post.title }}
+             
                </p>
            </v-card-title>
            
-           <v-card-text class="pre-wrap">{{ item.summary }}</v-card-text>
+           <v-card-text class="pre-wrap">{{ post.summary }}</v-card-text>
            <v-card-actions>
-         <v-btn @click="routeToNews(item._path)">Click me</v-btn>
+         <v-btn :to="post">Click me</v-btn>
          
        </v-card-actions>
          </v-card>
@@ -52,28 +53,21 @@
  </template>
  
  <script setup>
-import { useRouter } from 'vue-router'
-
-
-  const isMounted =ref(false);
-  const router1 = useRouter();
+  const router = useRouter()
   const { path } = useRoute();
-
- const {data:posts} =await useAsyncData("/blogs", () => queryContent('/blogs').find());
-
- const routeToNews = (item) => {
-  console.log (item);
-  if (item) {
-    router1.push(item);
-  } else {
-    console.error('Invalid Route path', item)
-  }
-};
-
+const { data:posts } = await useAsyncData('blogs',()=>
+queryContent('/blogs').find()
+)
+ 
  const drawer = ref(false);
  definePageMeta({
    layout:'default'
  })
+ const routeTo = (item) => {
+ 
+    router.push(item._path);
+ 
+};
  
  useHead({
  title: 'ICJIA',
@@ -82,9 +76,6 @@ import { useRouter } from 'vue-router'
    
  ],
  });
- onMounted(() => {
-  isMounted.value = true;
-});
  </script>
  
  <style lang="scss" scoped>
