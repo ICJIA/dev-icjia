@@ -27,7 +27,7 @@ const { path } = useRoute();
 const isMounted = ref(false);
 console.log("news path",path)
 const { data } = await useAsyncData(`content-${path}`, async () => {
-const post = await queryContent().where({ _path: path }).findOne();
+const post = await queryContent(path).findOne();
 return post;
 });
 if(!data.value){
