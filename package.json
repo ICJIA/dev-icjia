@@ -3,13 +3,14 @@
   "private": false,
   "type": "module",
   "scripts": {
-    "build": "nuxt build",
+    "build": "yarn scripts && nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@nuxtjs/apollo": "^5.0.0-alpha.13",
     "@pinia-plugin-persistedstate/nuxt": "^1.2.0",
     "nuxt": "^3.9.3",
     "sass": "^1.70.0",

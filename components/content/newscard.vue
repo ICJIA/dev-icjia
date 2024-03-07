@@ -1,15 +1,12 @@
 <template>
     <div>
-      <div v-if ="data">
+        <div v-if ="data">
             {{  data }}
         </div>
     </div>
 </template>
 
 <script setup>
-definePageMeta({
-  layout: 'content'
-});
 const query = gql`
   query getPages {
     pages(limit:$limit) {
