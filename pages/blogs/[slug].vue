@@ -27,11 +27,11 @@ const { path } = useRoute();
 const router = useRouter();
 const isMounted = ref(false);
 console.log("news path",path)
-const { data1 } = await useAsyncData(`content-${path}`, async () => {
+const { data } = await useAsyncData(`content-${path}`, async () => {
 const post = await queryContent().where({ _path: path }).findOne();
 return post;
 });
-const { data } = await useAsyncData("blogs", () => queryContent(path).findOne())
+const { data1 } = await useAsyncData("blogs", () => queryContent(path).findOne())
 if(!data.value){
   throw showError({statusCode:404,statusMessage:"Page Not Found",fatal:true});
 }

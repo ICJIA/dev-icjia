@@ -29,6 +29,11 @@ export default defineNuxtConfig({
       }
     },
   },
+  routeRules:{
+    '/':{prerender:true},
+    '/blogs': {isr:4000},
+    '/blogs/**':{isr:true},
+  },
  
   vite: {
     optimizeDeps: {
