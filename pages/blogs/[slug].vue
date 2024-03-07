@@ -24,10 +24,11 @@
 
 <script setup>
 const { path } = useRoute();
+const router = useRouter();
 const isMounted = ref(false);
 console.log("news path",path)
 const { data } = await useAsyncData(`content-${path}`, async () => {
-const post = await queryContent(path).findOne();
+const post = await queryContent().where({ _path: path }).findOne();
 return post;
 });
 if(!data.value){
@@ -41,6 +42,9 @@ router.push("/404");
 definePageMeta({
   layout: 'content'
 })
+onMounted(()=>{
+  isMounted.value = true;
+})
 
 useHead({
 title: data.value?.title,
@@ -48,11 +52,7 @@ meta: [
   { name: 'description', content: 'Explore my latest blog posts!' },
   
 ],
-link:[
-  {
-    hid:'blog',href:'Path'
-  }
-]
+
 });
 </script>
 
