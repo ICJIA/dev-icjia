@@ -17,7 +17,7 @@ yarn dev
 
 # Website link
 
-https://dev-icjia-new.netlify.app
+https://dev-icjia.netlify.app
 
 ## Setup
 
