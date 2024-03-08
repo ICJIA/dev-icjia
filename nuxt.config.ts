@@ -11,7 +11,7 @@ export default defineNuxtConfig({
     "@nuxt/content",
     "@pinia/nuxt",
     "@pinia-plugin-persistedstate/nuxt",
-    "@nuxtjs/apollo",
+   
 
     async (options, nuxt) => {
       await nuxt.hooks.hook("vite:extendConfig", (config) => {
@@ -21,14 +21,7 @@ export default defineNuxtConfig({
     },
     //...
   ],
-  apollo: {
-    clients: {
-      default: {
-        tokenName: 'AUTH_TOKEN',
-        httpEndpoint: 'https://agency.icjia-api.cloud/graphql'
-      }
-    },
-  },
+  
   routeRules:{
     '/':{prerender:true},
     '/blogs': {isr:4000},
