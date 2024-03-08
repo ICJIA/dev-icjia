@@ -9,6 +9,12 @@
         </v-col>
       </v-row>
     </v-container>
+    <v-container fluid>
+      <v-row>
+       
+      </v-row>
+
+    </v-container>
       <div v-if="data">
         {{ data }}
       </div>
@@ -19,8 +25,15 @@
 definePageMeta({
   layout: 'content'
 });
-const { data } = await useAsyncGql('posts',{limit:10});
-
+const { data } = await useAsyncGql({
+  operation: 'posts',
+  variables: { limit: 10 },
+ 
+});
+useHead({
+  title:'NEWS',
+  meta:[{ hid: 'description, content: description'}]
+})
 
 </script>
 
