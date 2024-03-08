@@ -26,7 +26,12 @@ export default defineNuxtConfig({
       GQL_HOST: 'https://agency.icjia-api.cloud/graphql'
     }
   },
-  
+  'graphql-client': {
+    codegen: false,
+    tokenStorage: {
+      mode: 'localStorage'
+    }
+  },
   
  
   vite: {

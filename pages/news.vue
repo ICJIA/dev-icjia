@@ -19,7 +19,7 @@
 definePageMeta({
   layout: 'content'
 });
-const { data } = await useAsyncGql('posts',{limit:1});
+const { data } = await useAsyncGql('posts',{limit:10});
 
 
 </script>

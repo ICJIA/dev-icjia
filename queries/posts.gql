@@ -1,9 +1,23 @@
 query posts {
-    posts {
+    posts(sort: "published_at:desc") {
       id
       title
-      
-     
-     
+      slug
+      summary
+      dateOverride
+      category
+      created_at
+      updated_at
+      published_at
+      tags {
+        title
+        slug
+      }
+      splash {
+        caption
+        alternativeText
+        url
+        formats
+      }
     }
   }
