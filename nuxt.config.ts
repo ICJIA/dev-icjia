@@ -27,7 +27,7 @@ export default defineNuxtConfig({
     }
   },
   'graphql-client': {
-    codegen: false,
+   
     tokenStorage: {
       mode: 'localStorage'
     }

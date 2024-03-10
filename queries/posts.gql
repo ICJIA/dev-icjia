@@ -1,23 +1,7 @@
-query posts($limit: Int =5) {
-    posts(limit:$limit) {
+query posts  {
+    posts(limit:10) {
       id
       title
-      slug
-      summary
-      dateOverride
-      category
-      created_at
-      updated_at
       published_at
-      tags {
-        title
-        slug
-      }
-      splash {
-        caption
-        alternativeText
-        url
-        formats
-      }
     }
-  }
+}
