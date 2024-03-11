@@ -6627,7 +6627,7 @@ nuxi@^3.10.1:
   optionalDependencies:
     fsevents "~2.3.3"
 
-nuxt-graphql-client@latest:
+nuxt-graphql-client@^0.2.33:
   version "0.2.33"
   resolved "https://registry.yarnpkg.com/nuxt-graphql-client/-/nuxt-graphql-client-0.2.33.tgz#886a3c35a218302beb3aabcb0255904da03ebf4b"
   integrity sha512-DoyipOT4Z+mIsFH+8/w4eQsHdkTGjlKRqA0KsU5oiyEsO9TsZRlfNv/LAo9mRdNqzIyBlnHQKLPIj42of/IKjg==

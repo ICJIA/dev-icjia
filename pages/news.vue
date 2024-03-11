@@ -17,12 +17,12 @@
       target="_blank"
       >
       <nuxt-link
-      :to="`/news/${post?.slug}`"
-      :key="post?.title">
+        :to="`/news/${post?.slug}`"
+        :key="post?.title">
         <v-card-title :title="post.title">
           {{ post.title }}
         </v-card-title>
-      </nuxt-link>
+     </nuxt-link>
       </v-card>
      </v-col>
     </v-row>
