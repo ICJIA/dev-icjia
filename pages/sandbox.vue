@@ -1,151 +1,151 @@
- <template>
-    <div>
-        <v-row>
-            <v-col cols="12" md="3" sm="6">
-        <v-card
-    class="mx-auto"
-    max-width="340"
-    hover
-    info-card
+<template>
+  <div>
+      <v-row>
+          <v-col cols="12" md="3" sm="6">
+      <v-card
+  class="mx-auto"
+  max-width="340"
+  hover
+  info-card
+>
+  <v-img
+    class="align-end text-white"
+    height="200"
+    src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
+    cover
   >
-    <v-img
-      class="align-end text-white"
-      height="200"
-      src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
-      cover
-    >
-      <v-card-title>ICJIA Image</v-card-title>
-    </v-img>
+    <v-card-title>ICJIA Image</v-card-title>
+  </v-img>
 
+ 
+
+  <v-card-text>
+    <div>This card contains image file</div>
+
+  
+  </v-card-text>
+
+  <v-card-actions>
    
-
-    <v-card-text>
-      <div>This card contains image file</div>
-
-    
-    </v-card-text>
-
-    <v-card-actions>
-     
-      <v-btn color="orange">
-        Explore
-      </v-btn>
-    </v-card-actions>
-  </v-card>
+    <v-btn color="orange">
+      Explore
+    </v-btn>
+  </v-card-actions>
+</v-card>
 </v-col>
 <v-col cols="12" md="3" sm="6">
-    <v-card
-    class="mx-auto"
-    max-width="340"
-    hover
+  <v-card
+  class="mx-auto"
+  max-width="340"
+  hover
+>
+  <v-img
+    class="align-end text-white"
+    height="200"
+    src="https://picsum.photos/id/13/200/300"
+    cover
   >
-    <v-img
-      class="align-end text-white"
-      height="200"
-      src="https://picsum.photos/id/13/200/300"
-      cover
-    >
-      <v-card-title>External Website</v-card-title>
-    </v-img>
+    <v-card-title>External Website</v-card-title>
+  </v-img>
 
+ 
+
+  <v-card-text>
+    <div>This card contains a link to external website</div>
+
+  
+  </v-card-text>
+
+  <v-card-actions>
    
-
-    <v-card-text>
-      <div>This card contains a link to external website</div>
-
-    
-    </v-card-text>
-
-    <v-card-actions>
-     
-      <v-btn color="orange">
-        Explore
-      </v-btn>
-    </v-card-actions>
-  </v-card>  
+    <v-btn color="orange">
+      Explore
+    </v-btn>
+  </v-card-actions>
+</v-card>  
 </v-col>
 <v-col cols="12" md="3" sm="6">
-    <v-card
-    class="mx-auto"
-    max-width="340"
-    hover
+  <v-card
+  class="mx-auto"
+  max-width="340"
+  hover
+>
+  <v-img
+    class="align-end text-white"
+    height="200"
+    src="https://picsum.photos/id/41/200/300"
+    cover
   >
-    <v-img
-      class="align-end text-white"
-      height="200"
-      src="https://picsum.photos/id/41/200/300"
-      cover
-    >
-      <v-card-title>PDF File</v-card-title>
-    </v-img>
+    <v-card-title>PDF File</v-card-title>
+  </v-img>
 
+ 
+
+  <v-card-text>
+    <div>This card contains downloadable file</div>
+
+  
+  </v-card-text>
+
+  <v-card-actions>
    
-
-    <v-card-text>
-      <div>This card contains downloadable file</div>
-
-    
-    </v-card-text>
-
-    <v-card-actions>
-     
-      <v-btn color="orange">
-        {{ data.title}}
-      </v-btn>
-    </v-card-actions>
-  </v-card>  
+    <v-btn color="orange">
+      {{ data.title}}
+    </v-btn>
+  </v-card-actions>
+</v-card>  
 </v-col>
 <v-col cols="12" md="3" sm="6">
-    <v-card
-    class="mx-auto"
-    max-width="340"
-    hover
-    @click="routeTo(`/${query[n - 1].slug}`)"
+  <v-card
+  class="mx-auto"
+  max-width="340"
+  hover
+  @click="routeTo(`/${query[n - 1].slug}`)"
+>
+  <v-img
+    class="align-end text-white"
+    height="200"
+    src="https://picsum.photos/id/37/200/300"
+    cover
   >
-    <v-img
-      class="align-end text-white"
-      height="200"
-      src="https://picsum.photos/id/37/200/300"
-      cover
-    >
-      <v-card-title>YouTube Video</v-card-title>
-    </v-img>
+    <v-card-title>YouTube Video</v-card-title>
+  </v-img>
 
-   
+ 
 
-    <v-card-text>
-      <div>This card containss an youtube video</div>
+  <v-card-text>
+    <div>This card containss an youtube video</div>
 
-    
-    </v-card-text>
+  
+  </v-card-text>
 
-    <v-card-actions>
-    
-      <v-btn color="orange">
-        {{ data.title}}
-      </v-btn>
-   
-    </v-card-actions>
-  </v-card>  
+  <v-card-actions>
+  
+    <v-btn color="orange">
+      {{ data.title}}
+    </v-btn>
+ 
+  </v-card-actions>
+</v-card>  
 </v-col>
 </v-row>
-  </div>
-  <v-btn 
-  v-model="isDarkMode"
-	icon="mdi-theme-light-dark"
-	size="large"
-	color="primary"
-	elevation="8"
-	@click="toggleSystemTheme"
+</div>
+<v-btn 
+v-model="isDarkMode"
+icon="mdi-theme-light-dark"
+size="large"
+color="primary"
+elevation="8"
+@click="toggleSystemTheme"
 
-      >
-      </v-btn>
-                 
+    >
+    </v-btn>
+               
 </template>
 
 <script setup>
 definePageMeta({
-  layout: 'content'
+layout: 'content'
 });
 const route= useRoute()
 const {data} = await useAsyncData('home',() =>queryContent('/blogs').find())
@@ -154,31 +154,31 @@ import { ref, watch, onMounted } from 'vue';
 const isDarkMode = ref(false);
 
 const updateTheme = (darkMode) => {
-  document.documentElement.classList.toggle('dark', darkMode);
-  localStorage.setItem('darkMode', darkMode ? '1' : '0');
+document.documentElement.classList.toggle('dark', darkMode);
+localStorage.setItem('darkMode', darkMode ? '1' : '0');
 };
 
 watch(isDarkMode, (newVal) => {
-  updateTheme(newVal);
+updateTheme(newVal);
 });
 
 
 
 const toggleSystemTheme = () => {
-  isDarkMode.value = systemThemeMediaQuery.matches;
-  updateTheme(isDarkMode.value);
+isDarkMode.value = systemThemeMediaQuery.matches;
+updateTheme(isDarkMode.value);
 };
 
 onMounted(() => {
-  const systemThemeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+const systemThemeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
 systemThemeMediaQuery.addEventListener('change', (event) => {
-  isDarkMode.value = event.matches;
+isDarkMode.value = event.matches;
 });
-  const storedTheme = localStorage.getItem('darkMode');
-  if (storedTheme === '1') {
-    isDarkMode.value = true;
-  }
+const storedTheme = localStorage.getItem('darkMode');
+if (storedTheme === '1') {
+  isDarkMode.value = true;
+}
 });
 </script>
 
