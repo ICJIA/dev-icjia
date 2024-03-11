@@ -1,7 +1,23 @@
-query posts  {
-    posts(limit:10) {
+query posts($slug:String!)  {
+    posts(sort: "published_at:desc",limit:10,where: { slug: $slug }) {
       id
       title
+      slug
+      summary
+      dateOverride
+      category
+      created_at
+      updated_at
       published_at
+      tags {
+        title
+        slug
+      }
+      splash {
+        caption
+        alternativeText
+        url
+        formats
+      }
     }
 }

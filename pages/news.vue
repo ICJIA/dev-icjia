@@ -12,12 +12,17 @@
    
     <v-container fluid>
       <v-row>
-       <v-col cols="12" md="4" v-for="post in posts" :key="post.id">
-        <v-card>
-          
+       <v-col cols="12" md="6" v-for="post in data?.posts" :key="post.id">
+        <v-card
+        target="_blank"
+        >
+        <nuxt-link
+        :to="`/news/${post?.slug}`"
+        :key="post?.title">
           <v-card-title :title="post.title">
             {{ post.title }}
           </v-card-title>
+        </nuxt-link>
         </v-card>
        </v-col>
       </v-row>
@@ -26,8 +31,7 @@
     
     <v-btn
         class="ma-2"
-        
-        color="secondary"
+       color="secondary"
       @click="loadMore"
      
       >
@@ -42,20 +46,17 @@
 definePageMeta({
   layout: 'content'
 });
-const { data } = await useAsyncGql(
-'posts'
- 
-);
+const { data } = await useAsyncGql({
+operation:'posts',
+});
 const posts =data.value?.posts;
 let page = 1;
 useHead({
   title:'NEWS',
   meta:[{ hid: 'description, content: description'}]
 })
-const loadMore = () => {
-  
-  
-};
+const loadMore = () => {};
+
 
 </script>
 
