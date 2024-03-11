@@ -1,4 +1,4 @@
-query posts($slug:String!)  {
+query posts ($slug: String!) {
     posts(sort: "published_at:desc",limit:10,where: { slug: $slug }) {
       id
       title
