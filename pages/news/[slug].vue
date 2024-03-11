@@ -4,8 +4,9 @@
     </div>
 </template>
 
-<script setup>
-
+<script lang="ts" setup>
+const route = useRoute();
+const { data }=await useAsyncGql('posts');
 </script>
 
 <style scoped>
