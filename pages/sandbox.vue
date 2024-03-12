@@ -1,10 +1,10 @@
 <template>
   <div>
-    {{ data?.posts?.length }}
+   
     <v-btn
       class="ma-2"
      color="secondary"
-    @click="loadMore"
+  
 
     >
       LOAD MORE
