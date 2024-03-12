@@ -12,7 +12,7 @@
  
   <v-container fluid>
     <v-row>
-     <v-col cols="12" md="6" v-for="post in data?.posts" :key="post?.slug">
+     <v-col cols="12" md="6" v-for="post in data?.posts" :key="post?.id">
       <v-card
       target="_blank"
       >
@@ -28,46 +28,34 @@
     </v-row>
     
   </v-container>
-  <v-col cols="12" class="text-center">
+  
   <v-btn
-      class="ma-2 justify-center"
+      class="ma-2"
      color="secondary"
     @click="loadMore"
    
     >
       LOAD MORE
     </v-btn>
-  </v-col>
+   
   </div>
  
 </template>
 
 <script lang="ts" setup>
-const slug="writing"
-const title="writing"
-import type { PostsQueryVariables} from "#gql";
-const options: PostsQueryVariables = {
-  limit: 10
-};
-
 definePageMeta({
 layout: 'content'
 });
-const query=ref("")
 const { data } = await useAsyncGql({
 operation:'posts',
 });
+const posts =data.value?.posts;
+let page = 1;
 useHead({
 title:'NEWS',
 meta:[{ hid: 'description, content: description'}]
 })
-const posts =data.value?.posts || [];
-
-
-
-const loadMore = () => {
-
-};
+const loadMore = () => {};
 
 
 </script>
