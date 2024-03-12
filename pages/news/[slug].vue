@@ -1,12 +1,24 @@
 <template>
-    <div>
+  <div>
+    <ContentRenderer :value="data"/>
 
-    </div>
+  </div>
 </template>
 
-<script lang="ts" setup>
+<script lang="ts"setup>
+
 const route = useRoute();
-const { data }=await useAsyncGql('posts');
+const slug = route.params.slug;
+
+
+
+const { data } = await useAsyncGql({
+  operation: "posts"
+})
+
+/*const { data } =await useAsyncData('news',()=> queryContent('/news').findOne())*/
+
+
 </script>
 
 <style scoped>

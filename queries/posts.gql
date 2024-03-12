@@ -1,5 +1,5 @@
-query posts  {
-     posts(sort: "published_at:desc",limit:10) {
+query posts($limit: Int!)  {
+     posts(sort: "published_at:desc",limit:$limit) {
       id
       title
       slug

@@ -12,6 +12,7 @@ export default defineNuxtConfig({
     "@pinia/nuxt",
     "@pinia-plugin-persistedstate/nuxt",
    "nuxt-graphql-client",
+   "@nuxtjs/apollo",
 
     async (options, nuxt) => {
       await nuxt.hooks.hook("vite:extendConfig", (config) => {
@@ -21,10 +22,17 @@ export default defineNuxtConfig({
     },
     //...
   ],
+  apollo: {
+    clients: {
+      default: {
+        httpEndpoint: 'https://agency.icjia-api.cloud/graphql'
+      }
+    },
+  },
   runtimeConfig: {
     public: {
       GQL_HOST: 'https://agency.icjia-api.cloud/graphql'
-    }
+    },
   },
   'graphql-client': {
    
