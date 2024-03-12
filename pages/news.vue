@@ -12,7 +12,7 @@
  
   <v-container fluid>
     <v-row>
-     <v-col cols="12" md="6" v-for="post in data?.posts" :key="post?.slug">
+     <v-col cols="12" md="6" v-for="post in data?.posts" :key="post?.id">
       <v-card
       target="_blank"
       >
