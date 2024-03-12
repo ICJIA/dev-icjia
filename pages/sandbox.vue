@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div >
    
     <v-btn
       class="ma-2"
@@ -15,22 +15,20 @@
 <script lang="ts" setup>
 
 const query=gql`
-query allPages($first: Int!,$first: Int!) {
-  posts(first: $first,offset: $offset) {
+{
+query allPages() {
+  posts(first:8) {
     id
     title
     slug
     created_at
     updated_at
    }
+  }
 }
 `
 
-/*const { loading,data,fetchMore } = useQuery(query,{ offset:0})
-const loadMore = () => {
-data.value?.posts
-};
-*/
+const { data }= await useAsyncQuery(query)
 
 </script>
 
