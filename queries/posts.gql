@@ -1,5 +1,5 @@
-query posts  {
-     posts(sort: "published_at:desc",limit:10) {
+query posts {
+     posts(sort: "published_at:desc", limit: 10) {
       id
       title
       slug
@@ -9,6 +9,14 @@ query posts  {
       created_at
       updated_at
       published_at
+      attachments {
+        updated_at
+        created_at
+        size
+        name
+        ext
+        url
+      }
       tags {
         title
         slug

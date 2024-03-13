@@ -16,8 +16,9 @@
       <v-card
       target="_blank"
       >
+   
       <nuxt-link
-        :to="`/news/${post?.slug}`"
+        :to="`https://agency.icjia-api.cloud${post?.splash?.url}`"
         :key="post?.title">
         <v-card-title v-if="post?.title">
           {{ post?.title }}
@@ -82,10 +83,9 @@
   <v-btn
       class="ma-2"
      color="secondary"
-  
-  
     >
-      LOAD MORE
+      LOAD {{ posts?.length }} MORE 
+
     </v-btn>
   </v-col> 
   </div>
@@ -96,14 +96,26 @@
 definePageMeta({
 layout: 'content'
 });
+
+const pageSize = 5;
+let currentPage = 1;
+
 const { data,error } = await useAsyncGql({
 operation:'posts',
+variables: {
+  limit: pageSize
+}
 });
+
+let posts =data.value.posts;
+
+
+
 useHead({
 title:'NEWS',
 meta:[{ hid: 'description, content: description'}]
 })
-const posts =data.value?.posts;
+
 /*const posts=data.value?.posts || [];
 const hasMore = data.value?.hasMore || false;
 const loadMore = async () =>{
