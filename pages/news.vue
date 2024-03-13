@@ -102,9 +102,7 @@ let currentPage = 1;
 
 const { data,error } = await useAsyncGql({
 operation:'posts',
-variables: {
-  limit: pageSize
-}
+
 });
 
 let posts =data.value.posts;
