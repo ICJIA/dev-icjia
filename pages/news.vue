@@ -68,7 +68,7 @@
       </template>
     </v-img>
 
-    <v-card-text v-if="post?.summary" style="color: #111"
+    <v-card-text v-if="post?.summary" style="color: #FFFFFF"
       >{{ post?.summary }}
     </v-card-text>
 

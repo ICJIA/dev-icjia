@@ -14,7 +14,7 @@ export default defineNuxtPlugin((app) => {
       themes: {
         light: {
           colors: {
-            primary: colors.lightBlue.darken1,
+            primary: colors.lightBlue.lighten1,
             secondary: colors.orange.lighten1,
             "on-secondary": colors.orange.darken3,
             background: colors.blue.lighten5,
