@@ -18,7 +18,7 @@
       >
    
       <nuxt-link
-        :to="`https://agency.icjia-api.cloud${post?.splash?.url}`"
+        :to="`/new/${post?.slug}`"
         :key="post?.title">
         <v-card-title v-if="post?.title">
           {{ post?.title }}

@@ -27,17 +27,20 @@
 
 <script lang="ts" setup>
 
+
+
 const pageSize = 1;
 let currentPage = 1;
 let startPage = 2;
 
 
 const { data,error } = await useAsyncGql({
-operation:'allPages1',
+operation:'posts',
 variables: { limit : pageSize, startPage: startPage }
 });
 console.log (data.value)
 let posts =data.value.posts;
+const route = useRouter()
 
 </script>
 

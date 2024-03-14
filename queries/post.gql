@@ -1,5 +1,5 @@
-query allPages1 ($limit: Int!, $startPage: Int!) {
-    posts(sort: "published_at:desc", limit: $limit, start: $startPage) {
+query allPages1 ($slug: String = "") {
+    posts(where: { slug: $slug }) {
     id
     title
     created_at

@@ -1,6 +1,7 @@
 <template>
   <div>
-    <ContentRenderer :content="data?.post?.content?.raw?.children" />
+   {{ data }}
+    <!--ContentRenderer :content="data?.content?.raw?.children" /-->
   </div>
 </template>
 
@@ -10,11 +11,9 @@ const route = useRoute()
 const variables1 = {
   slug: route.params.slug[0],
 }
-const { data } = await useAsyncGql({
-  operation: "allPages1",
-  
-})
-consolele.log("test")
+const { data } = await useAsyncGql('allPages1')
+
+console.log("test")
 console.log(data.value)
 </script>
 
