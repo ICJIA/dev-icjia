@@ -102,6 +102,9 @@ layout: 'content'
 
 const pageSize = 10;
 let startPage = 0;
+const route=useRoute();
+const routePath=ref(route.path);
+let fullPath = ref(`https://agency.icjia-api.cloud${routePath.value}`);
 
 const { data,error } = await useAsyncGql({
 operation:'posts',

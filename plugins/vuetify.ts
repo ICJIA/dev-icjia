@@ -22,7 +22,7 @@ export default defineNuxtPlugin((app) => {
             error: colors.red.accent3,
             info: colors.orange.darken2,
             success: colors.green.accent3,
-            surface: colors.orange.lighten2,
+            surface: colors.lightBlue.lighten1,
             warning: colors.red.accent3,
             
           },
@@ -35,12 +35,14 @@ export default defineNuxtPlugin((app) => {
             secondary: colors.orange.darken1,
             "on-secondary": colors.orange.lighten1,
             background: colors.blueGrey.darken4,
-            "on-background": colors.grey.lighten2,
+            "on-background": colors.grey.lighten5,
             error: colors.red.accent3,
             info: colors.orange.lighten2,
             success: colors.green.accent3,
-            surface: colors.orange.darken2,
+            surface: colors.blueGrey.lighten2,
+            "on-surface": colors.grey.lighten2,
             warning: colors.red.accent3,
+            
           },
           dark: true,
           variables: {
@@ -60,6 +62,7 @@ export default defineNuxtPlugin((app) => {
             'theme-on-kbd': '#FFFFFF',
             'theme-code': '#F5F5F5',
             'theme-on-code': '#000000',
+            'text-color':'#ffffff'
           },
         },
       },
