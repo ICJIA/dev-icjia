@@ -83,6 +83,7 @@
   <v-btn
       class="ma-2"
      color="secondary"
+     
     >
       LOAD {{ posts?.length }} MORE 
 
@@ -98,17 +99,27 @@ layout: 'content'
 });
 
 const pageSize = 5;
-let currentPage = 1;
+let startPage = 0;
 
 const { data,error } = await useAsyncGql({
 operation:'posts',
-
+variables: { limit : pageSize, startPage: startPage }
 });
 
 let posts =data.value.posts;
-
-
-
+/*
+const loadMore = async () => {
+  startPage: startPage + 5;
+  const newData = await useAsyncGql({
+    operation: 'posts',
+    variables: { limit : pageSize, startPage: startPage }
+  });
+  console.log (newData.value)
+  /*if (data.value && data.value.posts) {
+    posts.value = [...posts?.value, ...data.value.posts];
+  }
+}; 
+*/
 useHead({
 title:'NEWS',
 meta:[{ hid: 'description, content: description'}]

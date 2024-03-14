@@ -1,0 +1,9 @@
+query allPages1 ($limit: Int!, $startPage: Int!) {
+    posts(sort: "published_at:desc", limit: $limit, start: $startPage) {
+    id
+    title
+    created_at
+    updated_at
+    published_at
+  }
+}

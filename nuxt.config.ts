@@ -25,8 +25,8 @@ export default defineNuxtConfig({
   apollo: {
     clients: {
       default: {
-        httpEndpoint: 'https://agency.icjia-api.cloud/graphql'
-      }
+        httpEndpoint: 'https://spacex-production.up.railway.app'
+      },
     },
   },
   runtimeConfig: {
