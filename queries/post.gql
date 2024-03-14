@@ -1,10 +1,59 @@
 query allPages1 ($slug: String !) {
     posts(where: { slug: $slug }) {
     id
-    title
-    created_at
-    updated_at
-    published_at
-    slug
+      title
+      slug
+      summary
+      showTOC
+      body
+      dateOverride
+      created_at
+      updated_at
+      hideSplash
+      category
+      published_at
+      attachmentLabel
+      attachments {
+        updated_at
+        created_at
+        size
+        name
+        ext
+        url
+      }
+      meetings {
+        title
+        slug
+      }
+      grants {
+        title
+        slug
+      }
+      programs {
+        title
+        slug
+      }
+      posts {
+        title
+        slug
+      }
+      biographies {
+        title: fullName
+        slug
+      }
+      events {
+        title: name
+        slug
+      }
+      tags(sort: "title:asc") {
+        title
+        slug
+      }
+      splash {
+        caption
+        alternativeText
+        url
+        formats
+      }
   }
 }
