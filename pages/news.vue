@@ -83,9 +83,9 @@
   <v-btn
       class="ma-2"
      color="secondary"
-     
+     @click="loadMore"
     >
-      LOAD {{ posts?.length }} MORE 
+      LOAD {{ pageSize }} MORE 
 
     </v-btn>
   </v-col> 
@@ -94,6 +94,8 @@
 </template>
 
 <script lang="ts" setup>
+
+
 definePageMeta({
 layout: 'content'
 });
@@ -107,36 +109,25 @@ variables: { limit : pageSize, startPage: startPage }
 });
 
 let posts =data.value.posts;
-/*
+
 const loadMore = async () => {
-  startPage: startPage + 5;
+  startPage += pageSize;
   const newData = await useAsyncGql({
-    operation: 'posts',
+    operation:'posts',
     variables: { limit : pageSize, startPage: startPage }
   });
-  console.log (newData.value)
-  /*if (data.value && data.value.posts) {
-    posts.value = [...posts?.value, ...data.value.posts];
-  }
+  /*console.log(startPage)
+  console.log (newData.data.value)
+  console.log(data.value.posts)
+  console.log(newData.data.value.posts)*/
+  data.value.posts?.push(...newData.data.value.posts)
 }; 
-*/
+
 useHead({
 title:'NEWS',
 meta:[{ hid: 'description, content: description'}]
 })
 
-/*const posts=data.value?.posts || [];
-const hasMore = data.value?.hasMore || false;
-const loadMore = async () =>{
-  page++;
-}
-try{
-  const moreData = await useAsyncGql({
-    operation: 'posts',
-    variable: {page},
-  });
-  data.value.posts=data.value
-}*/
 </script>
 
 <style scoped>
