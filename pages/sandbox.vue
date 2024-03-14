@@ -1,8 +1,6 @@
 <template>
   <div>
-    <p>There are  ships.</p>
-    
-    LOAD {{ posts?.length }} MORE 
+
 <v-container>
   <v-row>
     <v-col v-for="post in data?.posts" :key="post?.id">
@@ -19,7 +17,7 @@
       
     </li>
 
-    <p>Test1</p>
+   
   </div>
   <!--v-btn
   @click="getMore"></!--v-btn-->
@@ -29,7 +27,7 @@
 
 
 
-const pageSize = 1;
+const pageSize = 5;
 let currentPage = 1;
 let startPage = 2;
 
@@ -40,7 +38,6 @@ variables: { limit : pageSize, startPage: startPage }
 });
 console.log (data.value)
 let posts =data.value.posts;
-const route = useRouter()
 
 </script>
 

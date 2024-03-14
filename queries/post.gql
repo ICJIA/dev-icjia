@@ -1,4 +1,4 @@
-query allPages1 ($slug: String = "") {
+query allPages1 ($slug: String !) {
     posts(where: { slug: $slug }) {
     id
     title

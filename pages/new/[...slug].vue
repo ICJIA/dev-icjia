@@ -1,20 +1,36 @@
 <template>
   <div>
-   {{ data }}
-    <!--ContentRenderer :content="data?.content?.raw?.children" /-->
+   
+   <P1>TEST</P1>
+    {{ data }}
+
+  
+
   </div>
 </template>
 
 <script setup>
+
+
 const route = useRoute()
+const slug = route.params.slug[0]
 
-const variables1 = {
-  slug: route.params.slug[0],
-}
-const { data } = await useAsyncGql('allPages1')
 
-console.log("test")
-console.log(data.value)
+
+
+const { data, error } = await useAsyncGql(
+{
+operation:'allPages1',
+
+variables: {slug: slug}
+});
+definePageMeta({
+layout: 'content'
+});
+
+
+
+
 </script>
 
 <style lang="scss" scoped>
