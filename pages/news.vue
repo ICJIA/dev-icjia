@@ -100,7 +100,7 @@ definePageMeta({
 layout: 'content'
 });
 
-const pageSize = 5;
+const pageSize = 10;
 let startPage = 0;
 
 const { data,error } = await useAsyncGql({
