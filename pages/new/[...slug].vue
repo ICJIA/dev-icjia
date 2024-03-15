@@ -69,6 +69,7 @@
     <v-card-text v-if="post?.body" style="color: #FFFFFF"
       >{{ post?.body }}
     </v-card-text>
+   
       </v-card>
       </v-col>
     </v-row>

@@ -10,17 +10,19 @@
     </v-row>
   </v-container>
  
-  <v-container fluid>
+  <v-container fluid info-card>
     <v-row>
      <v-col cols="12" md="6" v-for="post in data?.posts" :key="post?.id">
       <v-card
+      class="rounded-xl elevation-10 d-flex flex-column info-card"
       target="_blank"
+      color="#dde7f0"
       >
    
       <nuxt-link
         :to="`/new/${post?.slug}`"
         :key="post?.title">
-        <v-card-title v-if="post?.title">
+        <v-card-title v-if="post?.title" style="color: #000000">
           {{ post?.title }}
         </v-card-title>
         <div v-if="post?.splash">
@@ -29,7 +31,7 @@
         :lazy-src="`https://agency.icjia-api.cloud${post?.splash.formats.thumbnail.url}`"
         width="100%"
       
-        class=""
+        class="resized-imgae"
         :ref="'img_' + post?.id"
       
         style="border: 1px solid #fafafa"
@@ -68,9 +70,10 @@
       </template>
     </v-img>
 
-    <v-card-text v-if="post?.summary" style="color: #FFFFFF"
+    <v-card-text v-if="post?.summary" style="color: #000000"
       >{{ post?.summary }}
     </v-card-text>
+   
 
      </nuxt-link>
      
@@ -88,7 +91,12 @@
       LOAD {{ pageSize }} MORE 
 
     </v-btn>
+    
   </v-col> 
+ <div align="center" text="24px">
+            Showing {{ posts?.length }} of
+             news items
+  </div>       
   </div>
  
 </template>
@@ -134,5 +142,7 @@ meta:[{ hid: 'description, content: description'}]
 </script>
 
 <style scoped>
-
+.resized-image{
+  width:200px; height:150px
+}
 </style>
