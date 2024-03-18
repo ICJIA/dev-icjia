@@ -85,7 +85,7 @@
                  <v-icon right small>mdi-menu-down</v-icon></v-btn
                >
              </template>
-             <v-list nav density="compact" elevation="2">
+             <v-list nav elevation="2">
                <span
                  v-for="(child, index) in menu.children"
                  :key="`child-${index}`"
@@ -105,7 +105,7 @@
                    :target="child?.external ? '_blank' : null"
                  >
                    <v-list-item-title
-                     style="font-size: 14px !important; font-weight: 400"
+                     style="font-size: 12px !important; font-weight: 400"
                      >{{ child.title }}
                      <span v-if="child?.external">External</span>
                      <v-icon v-if="child.icon" small right color="black">{{

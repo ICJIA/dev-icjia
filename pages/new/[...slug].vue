@@ -9,17 +9,17 @@
     class="pa-2 card py-8 px-3 mx-1"
     outlined
     min-width="300px"
-    color="#dde7f0"
+    color="#F6F6F4"
     align="center" justify="center">
        
        <v-card-text v-if="post?.title"
-      ><h2 style="margin-top: -20px; line-height: 28px">
+      ><h2 style="font-size: 24px; margin-top: -25px; font-weight: bold">
         {{ post?.title }}
       </h2></v-card-text
     >
     <v-card-text
       v-if="post?.authors"
-      style="font-weight: 700; color: #888; font-size: 12px; margin-top: -25px"
+      style="font-weight: 700; color: #888; font-size: 20px; margin-top: -25px"
       >{{ displayAuthors(post?.authors) }}</v-card-text
     >
     <div v-if="post?.splash">
@@ -55,22 +55,21 @@
       alt="ICJIA Intranet image"
       v-else
     >
-    <template v-slot:placeholder>
-        <v-row class="fill-height ma-0" align="center" justify="center">
-          <v-progress-circular
-            indeterminate
-            aria-label="Progress bar: Loading"
-            color="blue darken-3"
-          ></v-progress-circular>
-        </v-row>
-      </template>
+    
     </v-img>
-    <v-card-text v-if="post?.summary" style="color: #000000"
+    
+    <v-card-text v-if="post?.summary" style="color: #000000;margin-top: -15px"
       >{{ post?.summary }}
     </v-card-text>
 
-    <v-card-text v-if="post?.body" align="left" style="color: #000000" v-html="renData"
+    <v-card-text v-if="post?.body"><div style="
+              margin-top: -20px;
+              font-size: 16px;
+              line-height: 24px;
+              
+            " v-html="renData"
       >
+      </div>
     </v-card-text>
    
       </v-card>
@@ -106,8 +105,7 @@ variables: {slug: slug}
 });
 
 const example = data.value.posts[0].body;
-console.log(example,"emptyz");
-console.log (JSON.stringify({body: example}),null,2);
+
 
 let renData = '';
 if(data.value && data.value.posts) {renData = md.render(data.value.posts[0].body);}

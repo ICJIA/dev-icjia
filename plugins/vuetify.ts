@@ -14,13 +14,13 @@ export default defineNuxtPlugin((app) => {
       themes: {
         light: {
           colors: {
-            primary: colors.lightBlue.lighten1,
-            secondary: colors.orange.lighten1,
-            "on-secondary": colors.orange.darken3,
-            background: colors.blue.lighten5,
+            primary: colors.grey.lighten5,
+            secondary: colors.grey.lighten1,
+            "on-secondary": colors.grey.darken3,
+            background: colors.grey.lighten5,
             "on-background": colors.grey.darken4,
             error: colors.red.accent3,
-            info: colors.orange.darken2,
+            info: colors.grey.darken2,
             success: colors.green.accent3,
             surface: colors.lightBlue.lighten1,
             warning: colors.red.accent3,
@@ -32,13 +32,13 @@ export default defineNuxtPlugin((app) => {
         dark: {
           colors: {
             primary: colors.blueGrey.darken1,
-            secondary: colors.orange.darken1,
-            "on-secondary": colors.orange.lighten1,
+            secondary: colors.blueGrey.darken1,
+            "on-secondary": colors.blueGrey.lighten1,
             background: colors.blueGrey.darken4,
-            "on-background": colors.grey.lighten5,
+            "on-background": colors.blueGrey.darken4,
             error: colors.red.accent3,
-            info: colors.orange.lighten2,
-            success: colors.green.accent3,
+            info: colors.blueGrey.lighten2,
+            success: colors.blueGrey.lighten2,
             surface: colors.blueGrey.lighten2,
             "on-surface": colors.grey.lighten2,
             warning: colors.red.accent3,

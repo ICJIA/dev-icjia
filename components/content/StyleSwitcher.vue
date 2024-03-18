@@ -5,7 +5,7 @@
             color="info"
             v-model="darkMode"
             @change="toggleTheme()"
-            :label="`It's ${darkMode ? 'Dark' : 'Light'}!`"
+            :label="`It's ${darkMode ? 'Dark' : 'Light'} Mode!`"
           ></v-switch>
           
   </div>

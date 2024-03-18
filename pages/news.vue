@@ -14,9 +14,9 @@
     <v-row>
      <v-col cols="12" md="6" v-for="post in data?.posts" :key="post?.id">
       <v-card
-      class="rounded-xl elevation-10 d-flex flex-column info-card card"
+      class="rounded-xl info-card elevation-10 d-flex flex-column mx-auto card"
       target="_blank"
-      color="#dde7f0"
+      color="#F6F6F4"
       >
    
       <nuxt-link
@@ -79,7 +79,7 @@
   <v-col cols="12" class="text-center">
   <v-btn
       class="ma-2"
-     color="secondary"
+     color="#092e5b"
      @click="loadMore"
     >
       LOAD {{ pageSize }} MORE 
@@ -89,7 +89,7 @@
   </v-col> 
  <div align="center" text="24px">
             Showing {{ posts?.length }} of
-             {{ posts?.length }} {{ counter1 }}
+             {{ posts?.length }} 
   </div>       
   </div>
  

@@ -22,7 +22,7 @@
        >       
       <v-card class="rounded-xl elevation-10 d-flex flex-column info-card" 
              style="width: 100%"
-             color="#dde7f0"
+             color="#F6F6F4"
              hover
              >
              
