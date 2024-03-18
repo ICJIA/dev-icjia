@@ -14,7 +14,7 @@
     <v-row>
      <v-col cols="12" md="6" v-for="post in data?.posts" :key="post?.id">
       <v-card
-      class="rounded-xl elevation-10 d-flex flex-column info-card"
+      class="rounded-xl elevation-10 d-flex flex-column info-card card"
       target="_blank"
       color="#dde7f0"
       >
@@ -28,17 +28,11 @@
         <div v-if="post?.splash">
       <v-img
         :src="`https://agency.icjia-api.cloud${post?.splash.formats.small.url}`"
-        :lazy-src="`https://agency.icjia-api.cloud${post?.splash.formats.thumbnail.url}`"
-        width="100%"
-      
-        class="resized-imgae"
         :ref="'img_' + post?.id"
-      
-        style="border: 1px solid #fafafa"
         alt="ICJIA News image"
-       
+        class="card-img"
         ><template #placeholder>
-          <v-row class="fill-height ma-0" align="center" justify="center">
+          <v-row class="fill-height ma-0">
             <v-progress-circular
               indeterminate
               color="blue darken-3"
@@ -60,7 +54,7 @@
       v-else
     >
       <template v-slot:placeholder>
-        <v-row class="fill-height ma-0" align="center" justify="center">
+        <v-row class="fill-height ma-0">
           <v-progress-circular
             indeterminate
             aria-label="Progress bar: Loading"
@@ -95,7 +89,7 @@
   </v-col> 
  <div align="center" text="24px">
             Showing {{ posts?.length }} of
-             news items
+             {{ posts?.length }} {{ counter1 }}
   </div>       
   </div>
  
@@ -118,7 +112,7 @@ const { data,error } = await useAsyncGql({
 operation:'posts',
 variables: { limit : pageSize, startPage: startPage }
 });
-
+console.log("testing",data)
 let posts =data.value.posts;
 
 const loadMore = async () => {
@@ -134,6 +128,12 @@ const loadMore = async () => {
   data.value.posts?.push(...newData.data.value.posts)
 }; 
 
+let counter1 = 1;
+  /*console.log(startPage)
+  console.log (newData.data.value)
+  console.log(data.value.posts)
+  console.log(newData.data.value.posts)*/
+
 useHead({
 title:'NEWS',
 meta:[{ hid: 'description, content: description'}]
@@ -142,7 +142,17 @@ meta:[{ hid: 'description, content: description'}]
 </script>
 
 <style scoped>
-.resized-image{
-  width:200px; height:150px
+
+.card {
+  height: 300px;
 }
+
+.card-img {
+  width: 50%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 </style>

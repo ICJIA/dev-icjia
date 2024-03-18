@@ -8,7 +8,9 @@
      elevation="1"
     class="pa-2 card py-8 px-3 mx-1"
     outlined
-    min-width="300px">
+    min-width="300px"
+    color="#dde7f0"
+    align="center" justify="center">
        
        <v-card-text v-if="post?.title"
       ><h2 style="margin-top: -20px; line-height: 28px">
@@ -63,11 +65,12 @@
         </v-row>
       </template>
     </v-img>
-    <v-card-text v-if="post?.summary" style="color: #FFFFFF"
+    <v-card-text v-if="post?.summary" style="color: #000000"
       >{{ post?.summary }}
     </v-card-text>
-    <v-card-text v-if="post?.body" style="color: #FFFFFF"
-      >{{ post?.body }}
+
+    <v-card-text v-if="post?.body" align="left" style="color: #000000" v-html="renData"
+      >
     </v-card-text>
    
       </v-card>
@@ -84,10 +87,14 @@
 
 <script setup>
 
+import MarkDownIt from 'markdown-it';
 
-const route = useRoute()
-const slug = route.params.slug[0]
+import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 
+const md = new MarkDownIt();
+
+const route = useRoute();
+const slug = route.params.slug[0];
 
 
 
@@ -97,11 +104,18 @@ operation:'allPages1',
 
 variables: {slug: slug}
 });
+
+const example = data.value.posts[0].body;
+console.log(example,"emptyz");
+console.log (JSON.stringify({body: example}),null,2);
+
+let renData = '';
+if(data.value && data.value.posts) {renData = md.render(data.value.posts[0].body);}
+
+
 definePageMeta({
 layout: 'content'
 });
-
-
 
 
 </script>

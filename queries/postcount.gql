@@ -1,0 +1,5 @@
+query allPages2 {
+    posts {
+      id
+  }
+}

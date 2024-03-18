@@ -21,6 +21,7 @@
     "vuetify": "^3.5.1"
   },
   "dependencies": {
+    "@contentful/rich-text-html-renderer": "^16.3.5",
     "@mdi/font": "^7.4.47",
     "@nuxt/content": "^2.11.0",
     "@nuxtjs/apollo": "workspace:*",
@@ -31,6 +32,7 @@
     "fuse.js": "^7.0.0",
     "graphql": "^16.8.1",
     "graphql-tag": "^2.12.6",
+    "markdown-it": "^14.0.0",
     "markdown-it-attrs": "^4.1.6",
     "moment": "^2.30.1",
     "nuxt-graphql-client": "^0.2.33",
