@@ -10,7 +10,7 @@
     outlined
     min-width="300px"
     color="#F6F6F4"
-    align="center" justify="center">
+    style="text-align:justify">
        
        <v-card-text v-if="post?.title"
       ><h2 style="font-size: 24px; margin-top: -25px; font-weight: bold">
@@ -65,8 +65,8 @@
     <v-card-text v-if="post?.body"><div style="
               margin-top: -20px;
               font-size: 16px;
-              line-height: 24px;
-              
+              line-height: 30px;
+              text-align:justify
             " v-html="renData"
       >
       </div>

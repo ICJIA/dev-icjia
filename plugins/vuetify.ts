@@ -32,18 +32,9 @@ export default defineNuxtPlugin((app) => {
         dark: {
           colors: {
             primary: colors.blueGrey.darken1,
-            secondary: colors.blueGrey.darken1,
-            "on-secondary": colors.blueGrey.lighten1,
-            background: colors.blueGrey.darken4,
-            "on-background": colors.blueGrey.darken4,
-            error: colors.red.accent3,
-            info: colors.blueGrey.lighten2,
-            success: colors.blueGrey.lighten2,
-            surface: colors.blueGrey.lighten2,
-            "on-surface": colors.grey.lighten2,
-            warning: colors.red.accent3,
-            
-          },
+            surface:'#263238',
+            background: '#263238',
+},
           dark: true,
           variables: {
             'border-color': '#000000',

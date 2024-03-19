@@ -2,7 +2,7 @@
 
 **For Installation**
 
-https://github.com/ICJIA/dev-icjia-new
+https://github.com/ICJIA/dev-icjia
 
 cd dev-icjia-new
 
